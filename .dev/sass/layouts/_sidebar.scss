@@ -1,0 +1,8 @@
+.widget-area {
+  .widget {
+    margin: 0 0 $base-spacing;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/**
+ * Theme Name: Stout
+ * Theme URI: https://wordpress.org/themes/stout/
+ * Author: GoDaddy
+ * Author URI: https://www.godaddy.com/
+ * Description: Primer is a modern WordPress theme based on _s.
+ * Version: 1.0.0
+ * License: GPL-2.0
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Template: primer
+ * Text Domain: primer
+ * Domain Path: /languages
+ * Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
+ *
+ * This theme, like WordPress, is licensed under the GPL.
+ * Use it to make something cool, have fun, and share what you've learned with others.
+ *
+ * Copyright © 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+ */
+
+@import "../../node_modules/normalize.css/normalize";
+@import "bourbon";
+@import "neat";
+
+@import "common/customizer";
+@import "common/variables";
+
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/layout";
+@import "components/lists";
+@import "components/media";
+@import "components/tables";
+@import "components/typography";
+@import "components/wp-classes";
+
+@import "layouts/footer";
+@import "layouts/header";
+@import "layouts/menu";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/sidebar";

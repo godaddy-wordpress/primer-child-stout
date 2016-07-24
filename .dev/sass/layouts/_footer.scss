@@ -1,0 +1,25 @@
+.footer-widget-area {
+  @include outer-container;
+
+  @for $i from 1 through 5 {
+    &.columns-#{$i} .footer-widget {
+      @include span-columns( 4 of ( $i * 4 ) );
+    }
+  }
+
+  .footer-widget .widget {
+    margin: 0 0 $base-spacing;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+
+  background: purple;
+}
+
+.site-info {
+  @include outer-container;
+
+  background: orange;
+}
