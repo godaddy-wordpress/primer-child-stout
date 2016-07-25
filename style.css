@@ -565,7 +565,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.25em;
-  padding: 1.5em 0; }
+  padding: 1.5em 1em; }
   #content::after {
     clear: both;
     content: "";
@@ -795,7 +795,7 @@ blockquote {
   color: #fff;
   font-family: "Oswald";
   font-size: 1.125em;
-  padding: 65px 0; }
+  padding: 65px 1em; }
   .footer-widget-area::after {
     clear: both;
     content: "";
@@ -852,7 +852,8 @@ blockquote {
 .site-info {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 1em; }
   .site-info::after {
     clear: both;
     content: "";
@@ -901,7 +902,7 @@ blockquote {
   font-size: 1.333em;
   height: 100px;
   line-height: 100px;
-  margin: 0 0 0 2.5em;
+  margin: 0 0 0 .75em;
   text-transform: uppercase; }
 
 .site-description {
@@ -928,7 +929,7 @@ blockquote {
   padding: 10px;
   cursor: pointer;
   float: right;
-  margin-top: 1.4em; }
+  margin: 1.2em; }
   .menu-toggle div {
     background: #404c4e;
     height: 4px;

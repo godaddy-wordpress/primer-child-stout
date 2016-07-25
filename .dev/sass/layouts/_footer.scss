@@ -7,7 +7,7 @@
   color: #fff;
   font-family: $secondary-font;
   font-size: 1.125em;
-  padding: 65px 0;
+  padding: 65px 1em;
 
   a {
     font-family: $primary-font;
@@ -39,6 +39,7 @@
 
 .site-info {
   @include outer-container;
+  padding: 1em;
 
   @include media($large-screen) {
     .site-info-text {

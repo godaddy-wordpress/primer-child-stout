@@ -20,7 +20,7 @@ body {
 #content {
   @include outer-container;
   font-size: 1.25em;
-  padding: $base-spacing 0;
+  padding: $base-spacing 1em;
 
   @include media($large-screen) {
 
