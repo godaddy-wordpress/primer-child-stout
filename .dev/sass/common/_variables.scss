@@ -3,8 +3,8 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: $font-stack-system;
-$heading-font-family: $base-font-family;
+$base-font-family: $primary-font;
+$heading-font-family: $secondary-font;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -20,21 +20,20 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $main-text-color;
+$action-color: $link-color;
 
 // Border
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: #e3eaeb;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms

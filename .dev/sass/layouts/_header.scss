@@ -1,5 +1,26 @@
 .site-header-wrapper {
   @include outer-container;
-  
-  background: red;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.site-title-wrapper {
+  float: left;
+
+  @include media($large-screen) {
+    @include span-columns(3);
+  }
+}
+
+.site-title {
+  font-size: em(24);
+  height: 100px;
+  line-height: 100px;
+  margin: 0 0 0 em(45);
+  text-transform: uppercase;
+}
+
+.site-description {
+  display: none;
 }

@@ -1,5 +1,123 @@
-.main-navigation {
-  @include outer-container;
+.menu-toggle {
+  display: block;
+  width: 65px;
+  padding: 10px;
+  cursor: pointer;
+  float: right;
+  margin-top: 1.4em;
 
-  background: green;
+  div {
+    background: $secondary-text-color;
+    height: 4px;
+    margin: 6px;
+  }
+}
+
+.main-navigation {
+  display: none;
+  clear: both;
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    color: $secondary-text-color;
+    display: block;
+    font-family: $secondary-font;
+    font-size: em(18);
+    font-weight: 700;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+  }
+
+  .current-menu-item > a,
+  a:hover {
+    color: $action-color;
+  }
+
+  .sub-menu a {
+    padding-left: 2em;
+  }
+
+  .sub-menu .sub-menu a {
+    padding-left: 3em;
+  }
+
+}
+
+@include media($large-screen) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation {
+    @include span-columns(9);
+    clear: none;
+    display: block;
+    position: relative;
+    z-index: auto;
+
+    ul {
+      float: right;
+    }
+
+    li {
+      float: left;
+
+      a {
+        height: 100px;
+        line-height: 100px;
+        padding: 0 em(12.5);
+      }
+
+      &.menu-item-has-children:hover > .sub-menu {
+        display: block;
+      }
+    }
+
+    .sub-menu {
+      display: none;
+      position: absolute;
+      width: 250px;
+      z-index: 100;
+      background-color: $menu-background-color;
+
+      li {
+        float: none;
+        position: relative;
+
+        a {
+          height: 50px;
+          line-height: 50px;
+        }
+
+        &.menu-item-has-children > a::after {
+          width: 0;
+          height: 0;
+          border-bottom: 7px solid transparent;
+          border-top: 7px solid transparent;
+          border-left: 7px solid $secondary-text-color;
+          font-size: 0;
+          line-height: 0;
+          content: "";
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .sub-menu {
+        left: 100%;
+        top: 0;
+      }
+
+      a,
+      .sub-menu a {
+        padding-left: 1em;
+      }
+    }
+  }
 }

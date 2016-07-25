@@ -18,6 +18,42 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 1.8em;
+}
+
+h3,
+h4 {
+  font-size: 1.2em;
+}
+
+h4,
+h5,
+h6 {
+  font-family: $primary-font;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
 p {
   margin: 0 0 $small-spacing;
 }
@@ -40,4 +76,36 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: $base-spacing 0;
+}
+
+address {
+  margin: 0 0 $small-spacing;
+}
+
+code,
+pre {
+  background: $base-background-color;
+  border: 1px solid $base-border-color;
+  border-radius: $base-border-radius;
+}
+
+code {
+  padding: 5px;
+}
+
+pre {
+  padding: 1em;
+}
+
+blockquote {
+  font-size: em(24);
+  font-style: italic;
+  font-weight: 300;
+
+  cite {
+    display: inline-block;
+    font-size: em(12);
+    font-style: normal;
+    font-weight:700;
+  }
 }

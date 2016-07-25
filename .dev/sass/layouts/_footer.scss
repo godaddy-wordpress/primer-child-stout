@@ -1,5 +1,17 @@
+.site-footer {
+  background-color: $secondary-text-color;
+}
+
 .footer-widget-area {
   @include outer-container;
+  color: #fff;
+  font-family: $secondary-font;
+  font-size: 1.125em;
+  padding: 65px 0;
+
+  a {
+    font-family: $primary-font;
+  }
 
   @for $i from 1 through 5 {
     &.columns-#{$i} .footer-widget {
@@ -14,12 +26,24 @@
     }
   }
 
-
-  background: purple;
+  .widget-title {
+    color: #fff;
+    font-family: $secondary-font;
+    font-size: 1.333em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 }
 
 .site-info {
   @include outer-container;
 
-  background: orange;
+  @include media($large-screen) {
+    .site-info-text {
+      @include span-columns(9);
+    }
+    .social-menu {
+      @include span-columns(3);
+    }
+  }
 }

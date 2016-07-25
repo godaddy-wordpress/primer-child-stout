@@ -13,8 +13,14 @@ body {
   height: 100%;
 }
 
+.container {
+  @include outer-container;
+}
+
 #content {
   @include outer-container;
+  font-size: 1.25em;
+  padding: $base-spacing 0;
 
   #primary {
     @include span-columns(9);

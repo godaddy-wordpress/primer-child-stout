@@ -13,8 +13,11 @@ legend {
 
 label {
   display: block;
-  font-weight: 600;
+  font-family: $secondary-font;
+  font-size: em(14);
+  font-weight: 700;
   margin-bottom: $small-spacing / 2;
+  text-transform: uppercase;
 }
 
 input,
@@ -32,6 +35,8 @@ textarea {
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
+  color: $secondary-text-color;
+  font-size: .9em;
   margin-bottom: $small-spacing;
   padding: $base-spacing / 3;
   transition: border-color $base-duration $base-timing;
