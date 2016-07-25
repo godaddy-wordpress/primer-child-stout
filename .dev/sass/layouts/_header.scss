@@ -1,6 +1,7 @@
 .site-header-wrapper {
   @include outer-container;
   background: #fff;
+  font-size: 1.125em;
   position: relative;
   z-index: 10;
 }
@@ -14,10 +15,10 @@
 }
 
 .site-title {
-  font-size: em(24);
+  font-size: 1.333em;
   height: 100px;
   line-height: 100px;
-  margin: 0 0 0 em(45);
+  margin: 0 0 0 2.5em;
   text-transform: uppercase;
 }
 

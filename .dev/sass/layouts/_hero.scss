@@ -2,22 +2,19 @@
   background: url('beer.jpg') no-repeat;
   background-size: cover;
   color: $background-color;
+  font-size: 1.125em;
   margin-top: -100px;
   min-height: 400px;
   width: 100%;
   padding-top: 100px;
 
   h1 {
-    font-size: em(103);
+    font-size: 5.722em;
     margin: 0;
   }
 
-  p {
-    font-size: em(18);
-  }
-
   .button {
-    font-size: em(24);
+    font-size: 1.333em;
   }
 
 }

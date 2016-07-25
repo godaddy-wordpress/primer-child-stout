@@ -13,9 +13,11 @@
     font-family: $primary-font;
   }
 
-  @for $i from 1 through 5 {
-    &.columns-#{$i} .footer-widget {
-      @include span-columns( 4 of ( $i * 4 ) );
+  @include media($large-screen) {
+    @for $i from 1 through 5 {
+      &.columns-#{$i} .footer-widget {
+        @include span-columns(4 of ($i * 4));
+      }
     }
   }
 

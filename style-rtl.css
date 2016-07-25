@@ -570,20 +570,21 @@ body {
     clear: both;
     content: "";
     display: block; }
-  #content #primary {
-    float: right;
-    display: block;
-    margin-left: 2.3576520234%;
-    width: 74.4105869942%; }
-    #content #primary:last-child {
-      margin-left: 0; }
-  #content #secondary {
-    float: right;
-    display: block;
-    margin-left: 2.3576520234%;
-    width: 23.2317609825%; }
-    #content #secondary:last-child {
-      margin-left: 0; }
+  @media screen and (min-width: 900px) {
+    #content #primary {
+      float: right;
+      display: block;
+      margin-left: 2.3576520234%;
+      width: 74.4105869942%; }
+      #content #primary:last-child {
+        margin-left: 0; }
+    #content #secondary {
+      float: right;
+      display: block;
+      margin-left: 2.3576520234%;
+      width: 23.2317609825%; }
+      #content #secondary:last-child {
+        margin-left: 0; } }
 
 ul,
 ol {
@@ -644,6 +645,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: #404c4e;
   font-family: "Oswald";
   font-size: 1.333em;
   line-height: 1.2;
@@ -800,41 +802,42 @@ blockquote {
     display: block; }
   .footer-widget-area a {
     font-family: "Lato"; }
-  .footer-widget-area.columns-1 .footer-widget {
-    float: right;
-    display: block;
-    margin-left: 7.4229717578%;
-    width: 100%; }
-    .footer-widget-area.columns-1 .footer-widget:last-child {
-      margin-left: 0; }
-  .footer-widget-area.columns-2 .footer-widget {
-    float: right;
-    display: block;
-    margin-left: 3.5786642602%;
-    width: 48.2106678699%; }
-    .footer-widget-area.columns-2 .footer-widget:last-child {
-      margin-left: 0; }
-  .footer-widget-area.columns-3 .footer-widget {
-    float: right;
-    display: block;
-    margin-left: 2.3576520234%;
-    width: 31.7615653177%; }
-    .footer-widget-area.columns-3 .footer-widget:last-child {
-      margin-left: 0; }
-  .footer-widget-area.columns-4 .footer-widget {
-    float: right;
-    display: block;
-    margin-left: 1.7578778568%;
-    width: 23.6815916074%; }
-    .footer-widget-area.columns-4 .footer-widget:last-child {
-      margin-left: 0; }
-  .footer-widget-area.columns-5 .footer-widget {
-    float: right;
-    display: block;
-    margin-left: 1.4013753919%;
-    width: 18.8788996865%; }
-    .footer-widget-area.columns-5 .footer-widget:last-child {
-      margin-left: 0; }
+  @media screen and (min-width: 900px) {
+    .footer-widget-area.columns-1 .footer-widget {
+      float: right;
+      display: block;
+      margin-left: 7.4229717578%;
+      width: 100%; }
+      .footer-widget-area.columns-1 .footer-widget:last-child {
+        margin-left: 0; }
+    .footer-widget-area.columns-2 .footer-widget {
+      float: right;
+      display: block;
+      margin-left: 3.5786642602%;
+      width: 48.2106678699%; }
+      .footer-widget-area.columns-2 .footer-widget:last-child {
+        margin-left: 0; }
+    .footer-widget-area.columns-3 .footer-widget {
+      float: right;
+      display: block;
+      margin-left: 2.3576520234%;
+      width: 31.7615653177%; }
+      .footer-widget-area.columns-3 .footer-widget:last-child {
+        margin-left: 0; }
+    .footer-widget-area.columns-4 .footer-widget {
+      float: right;
+      display: block;
+      margin-left: 1.7578778568%;
+      width: 23.6815916074%; }
+      .footer-widget-area.columns-4 .footer-widget:last-child {
+        margin-left: 0; }
+    .footer-widget-area.columns-5 .footer-widget {
+      float: right;
+      display: block;
+      margin-left: 1.4013753919%;
+      width: 18.8788996865%; }
+      .footer-widget-area.columns-5 .footer-widget:last-child {
+        margin-left: 0; } }
   .footer-widget-area .footer-widget .widget {
     margin: 0 0 1.5em; }
     .footer-widget-area .footer-widget .widget:last-child {
@@ -875,6 +878,7 @@ blockquote {
   margin-right: auto;
   margin-left: auto;
   background: #fff;
+  font-size: 1.125em;
   position: relative;
   z-index: 10; }
   .site-header-wrapper::after {
@@ -894,10 +898,10 @@ blockquote {
         margin-left: 0; } }
 
 .site-title {
-  font-size: 1.5em;
+  font-size: 1.333em;
   height: 100px;
   line-height: 100px;
-  margin: 0 2.8125em 0 0;
+  margin: 0 2.5em 0 0;
   text-transform: uppercase; }
 
 .site-description {
@@ -907,17 +911,16 @@ blockquote {
   background: url("beer.jpg") no-repeat;
   background-size: cover;
   color: #ffffff;
+  font-size: 1.125em;
   margin-top: -100px;
   min-height: 400px;
   width: 100%;
   padding-top: 100px; }
   .hero h1 {
-    font-size: 6.4375em;
+    font-size: 5.722em;
     margin: 0; }
-  .hero p {
-    font-size: 1.125em; }
   .hero .button {
-    font-size: 1.5em; }
+    font-size: 1.333em; }
 
 .menu-toggle {
   display: block;
@@ -941,7 +944,6 @@ blockquote {
     color: #404c4e;
     display: block;
     font-family: "Oswald";
-    font-size: 1.125em;
     font-weight: 700;
     padding: 0.5em 1em;
     text-transform: uppercase; }
@@ -1020,7 +1022,6 @@ blockquote {
 .entry-footer,
 .nav-links {
   font-family: "Oswald";
-  font-size: 1.125em;
   margin: 0 0 0.75em;
   text-transform: uppercase; }
 
