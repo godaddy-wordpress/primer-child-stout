@@ -965,7 +965,7 @@ blockquote {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1em; }
+  padding: 2em 1em; }
   .site-info::after {
     clear: both;
     content: "";
@@ -985,6 +985,28 @@ blockquote {
       width: 23.2317609825%; }
       .site-info .social-menu:last-child {
         margin-right: 0; } }
+
+.footer-menu {
+  color: #404c4e; }
+  .footer-menu ul {
+    list-style: none;
+    margin: 0 0 0.75em;
+    padding: 0; }
+    .footer-menu ul li {
+      display: inline-block;
+      padding: 0 1.5em 0 0; }
+      .footer-menu ul li a {
+        color: #404c4e;
+        font-weight: 700; }
+        .footer-menu ul li a:active, .footer-menu ul li a:focus, .footer-menu ul li a:hover {
+          color: #30393b; }
+
+.social-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .social-menu ul li {
+    display: inline-block; }
 
 .site-header-wrapper {
   max-width: 1200px;

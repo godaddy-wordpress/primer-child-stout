@@ -51,7 +51,7 @@
 
 .site-info {
   @include outer-container;
-  padding: 1em;
+  padding: 2em 1em;
 
   @include media($large-screen) {
     .site-info-text {
@@ -59,6 +59,41 @@
     }
     .social-menu {
       @include span-columns(3);
+    }
+  }
+}
+
+.footer-menu {
+  color: $secondary-text-color;
+  ul {
+    list-style: none;
+    margin: 0 0 $small-spacing;
+    padding: 0;
+    li {
+      display: inline-block;
+      padding: 0 $base-spacing 0 0;
+
+      a {
+        color: $secondary-text-color;
+        font-weight: 700;
+
+        &:active,
+        &:focus,
+        &:hover {
+          color: shade($secondary-text-color, 25%);
+        }
+      }
+    }
+  }
+}
+
+.social-menu {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
     }
   }
 }
