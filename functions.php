@@ -59,3 +59,24 @@ function stout_add_sidebars( $sidebars ) {
 }
 
 add_filter( 'primer_register_sidebars', 'stout_add_sidebars' );
+
+
+/**
+ * Add a footer menu.
+ *
+ * @action primer_nav_menus
+ *
+ * @param $nav_menus
+ *
+ * @return array
+ */
+function stout_add_nav_menus( $nav_menus ) {
+	
+	$new_nav_menus = array(
+		'footer' => esc_html__( 'Footer Menu', 'stout' ),
+	);
+
+	return array_merge( $nav_menus, $new_nav_menus );
+
+}
+add_filter( 'primer_nav_menus', 'stout_add_nav_menus' );

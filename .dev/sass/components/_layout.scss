@@ -15,22 +15,96 @@ body {
 
 .container {
   @include outer-container;
+  padding: 1em;
 }
 
 #content {
   @include outer-container;
   font-size: 1.25em;
   padding: $base-spacing 1em;
+}
 
-  @include media($large-screen) {
+/**
+ * Theme Layouts
+ */
+@include media($large-screen) {
 
+  body.layout-one-column-wide,
+  body.layout-one-column-narrow {
+    #primary, #secondary {
+      @include span-columns(12);
+    }
+  }
+
+  body.layout-one-column-narrow {
+    #content {
+      @include outer-container(50em);
+    }
+  }
+
+  body.layout-two-column-default,
+  body.layout-two-column-reversed {
     #primary {
-      @include span-columns(9);
+      @include span-columns(8);
     }
-
     #secondary {
-      @include span-columns(3);
+      @include span-columns(4);
     }
+  }
 
+  body.layout-two-column-reversed {
+    #primary {
+      @include shift(4);
+    }
+    #secondary {
+      @include shift(-12);
+    }
+  }
+
+  body.layout-three-column-default,
+  body.layout-three-column-center,
+  body.layout-three-column-reversed{
+    #primary {
+      @include span-columns(8);
+    }
+    #secondary {
+      @include span-columns(2);
+    }
+    #tertiary {
+      @include span-columns(2);
+    }
+  }
+
+  body.layout-three-column-center {
+    #primary {
+      @include shift(2);
+    }
+    #secondary {
+      @include shift(-10);
+    }
+  }
+
+  body.layout-three-column-reversed {
+    #primary {
+      @include shift(4);
+    }
+    #secondary {
+      @include shift(-12);
+    }
+    #tertiary {
+      @include shift(-10);
+    }
+  }
+}
+
+/*
+ * Header & Footer Width
+ */
+body.no-max-width {
+  .site-header-wrapper,
+  .hero .container,
+  .footer-widget-area,
+  .site-info {
+    max-width: none;
   }
 }

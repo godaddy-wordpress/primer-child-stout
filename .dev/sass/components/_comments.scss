@@ -17,13 +17,39 @@
   @extend .btn;
   @extend .btn-primary;
 }*/
+.comments-area {
+  .comment-list,
+  .children {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.comment {
-  .comment-meta,
-  .reply {
-    font-family: $secondary-font;
-    font-size: em(18);
-    margin: 0 0 $small-spacing;
-    text-transform: uppercase;
+  .avatar {
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin: 0 $small-spacing $small-spacing 0;
+  }
+
+  .comment {
+    padding: 1em;
+    border: 2px solid $link-color;
+    margin: $small-spacing 0;
+
+    .comment-meta,
+    .reply {
+      font-family: $secondary-font;
+      font-size: em(18);
+      text-transform: uppercase;
+    }
+
+    .comment-respond {
+      margin: $base-spacing 0 0;
+    }
+
+    .comment-content {
+      clear: both;
+    }
   }
 }

@@ -7,7 +7,7 @@
   color: #fff;
   font-family: $secondary-font;
   font-size: 1.125em;
-  padding: 65px 1em;
+  padding: 3.5em 1em;
 
   a {
     font-family: $primary-font;
@@ -21,8 +21,14 @@
     }
   }
 
-  .footer-widget .widget {
+  .widget {
     margin: 0 0 $base-spacing;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
     &:last-child {
       margin: 0;
     }
@@ -34,6 +40,12 @@
     font-size: 1.333em;
     font-weight: 700;
     text-transform: uppercase;
+  }
+
+  .widget_recent_entries {
+    .post-date {
+      margin: 0 0 $small-spacing;
+    }
   }
 }
 

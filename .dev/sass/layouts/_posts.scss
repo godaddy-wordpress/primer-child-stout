@@ -3,14 +3,14 @@
 }
 
 .entry-title {
-  margin: 0;
+  margin: 0 0 .375em;
 }
 
 .entry-meta,
 .entry-footer,
 .nav-links {
   font-family: $secondary-font;
-  margin: 0 0 $small-spacing;
+  margin: 0 0 $base-spacing;
   text-transform: uppercase;
 }
 

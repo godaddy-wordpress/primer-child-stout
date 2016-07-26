@@ -8,6 +8,12 @@
   width: 100%;
   padding-top: 100px;
 
+  code,
+  pre {
+    background: none;
+    border: none;
+  }
+
   h1 {
     font-size: 5.722em;
     margin: 0;
@@ -15,6 +21,10 @@
 
   .button {
     font-size: 1.333em;
+  }
+
+  .widget {
+    margin: 0 0 $base-spacing;
   }
 
 }

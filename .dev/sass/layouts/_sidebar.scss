@@ -9,8 +9,19 @@
       text-transform: uppercase;
     }
 
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
     &:last-child {
       margin: 0;
     }
+  }
+}
+
+.widget_recent_entries {
+  .post-date {
+    display: block;
   }
 }
