@@ -18,9 +18,11 @@
  * Copyright © 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
  */
 
-@import "../../node_modules/normalize.css/normalize";
+// We should load these additional dependencies better.
+@import "normalize";
 @import "bourbon";
 @import "neat";
+@import "social-logos";
 
 @import "common/customizer";
 @import "common/variables";
@@ -31,6 +33,7 @@
 @import "components/layout";
 @import "components/lists";
 @import "components/media";
+@import "components/social";
 @import "components/tables";
 @import "components/typography";
 @import "components/wp-classes";

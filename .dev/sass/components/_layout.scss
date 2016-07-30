@@ -45,16 +45,16 @@ body {
   body.layout-two-column-default,
   body.layout-two-column-reversed {
     #primary {
-      @include span-columns(8);
+      @include span-columns(9);
     }
     #secondary {
-      @include span-columns(4);
+      @include span-columns(3);
     }
   }
 
   body.layout-two-column-reversed {
     #primary {
-      @include shift(4);
+      @include shift(3);
     }
     #secondary {
       @include shift(-12);

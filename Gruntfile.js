@@ -130,8 +130,23 @@ module.exports = function(grunt) {
 				sourceMap: true,
 				includePaths: [
 					require("bourbon").includePaths,
-					require("bourbon-neat").includePaths
-				]
+					require("bourbon-neat").includePaths,
+					'./node_modules/normalize.css',
+					'./node_modules/social-logos/icon-font'
+				],
+			}
+		},
+
+		copy: {
+			main: {
+				expand: true,
+				src: [
+					'node_modules/social-logos/icon-font/*.eot',
+					'node_modules/social-logos/icon-font/*.woff2'
+				],
+				dest: 'assets/fonts',
+				filter: 'isFile',
+				flatten: true
 			}
 		},
 
@@ -159,7 +174,7 @@ module.exports = function(grunt) {
 				options: {
 					interrupt: true
 				}
-			}
+			},
 		},
 
 		browserSync: {
@@ -182,7 +197,7 @@ module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask('default', ['browserSync', 'watch']);
+	grunt.registerTask('default', ['copy', 'browserSync', 'watch']);
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 

@@ -2,7 +2,7 @@
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
 // Media alignment
-/*.alignnone {
+.alignnone {
   margin-left: 0;
   margin-right: 0;
   max-width: 100%;
@@ -10,33 +10,45 @@
 }
 .aligncenter {
   display: block;
-  margin: ($line-height-computed / 2) auto;
+  margin: 0 auto $small-spacing auto;
   height: auto;
 }
 .alignleft,
 .alignright {
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: $small-spacing;
   height: auto;
 }
-@media (min-width: $screen-sm-min) {
+@include media($large-screen) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
-    margin-right: ($line-height-computed / 2);
+    margin-right: $small-spacing
   }
   .alignright {
     float: right;
-    margin-left: ($line-height-computed / 2);
+    margin-left: $small-spacing;
   }
 }
 
 // Captions
 .wp-caption {
-  @extend .thumbnail;
+  display: block;
+  padding: $small-spacing;
+  margin-bottom: $small-spacing;
+  line-height: $base-line-height;
+  background-color: $base-background-color;
+  border: $base-border;
+  border-radius: $base-border-radius;
+
+  > img,
+  a > img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .wp-caption-text {
-  padding: $thumbnail-caption-padding;
-}*/
+  padding: $small-spacing;
+}
 
 // Text meant only for screen readers
 .screen-reader-text {
@@ -48,11 +60,11 @@
 }
 
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
+  background-color: $base-background-color;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  color: #21759b;
+  color: $action-color;
   display: block;
   font-size: 14px;
   font-size: 0.875rem;

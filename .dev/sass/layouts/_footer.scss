@@ -52,8 +52,11 @@
 .site-info {
   @include outer-container;
   padding: 2em 1em;
+  text-align: center;
 
   @include media($large-screen) {
+    text-align: left;
+
     .site-info-text {
       @include span-columns(9);
     }
@@ -70,8 +73,12 @@
     margin: 0 0 $small-spacing;
     padding: 0;
     li {
-      display: inline-block;
-      padding: 0 $base-spacing 0 0;
+      display: block;
+
+      @include media($large-screen) {
+        display: inline-block;
+        padding: 0 $base-spacing 0 0;
+      }
 
       a {
         color: $secondary-text-color;
@@ -88,6 +95,7 @@
 }
 
 .social-menu {
+  margin-top: 1.5em;
   ul {
     list-style: none;
     margin: 0;
@@ -95,5 +103,10 @@
     li {
       display: inline-block;
     }
+  }
+
+  @include media($large-screen) {
+    margin-top: 0;
+    text-align: right;
   }
 }
