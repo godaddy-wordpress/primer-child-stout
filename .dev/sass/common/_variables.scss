@@ -19,17 +19,12 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
-// Colors
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
-
 // Font Colors
 $base-font-color: $main-text-color;
 $action-color: $link-color;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $secondary-text-color;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors

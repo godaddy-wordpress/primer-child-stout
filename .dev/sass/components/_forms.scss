@@ -43,7 +43,7 @@ textarea {
   width: 100%;
 
   &:hover {
-    border-color: shade($base-border-color, 20%);
+    border-color: shade($secondary-text-color, 20%);
   }
 
   &:focus {
@@ -62,7 +62,7 @@ textarea {
   }
 
   &::placeholder {
-    color: $medium-gray;
+    color: $secondary-text-color;
   }
 }
 

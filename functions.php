@@ -187,7 +187,10 @@ function stout_colors() {
 			'label'   => esc_html__( 'Link Color', 'primer' ),
 			'default' => '#e3ae30',
 			'css'     => array(
-				'a' => array(
+				'a,
+				.main-navigation .current-menu-item > a,
+                .main-navigation a:hover,
+                .screen-reader-text:focus' => array(
 					'color' => '%1$s',
 				),
 				'.button,
@@ -222,6 +225,42 @@ function stout_colors() {
 			'default' => '#252f31',
 			'css'     => array(
 				'body' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'secondary_text_color',
+			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
+			'default' => '#404c4e',
+			'css'     => array(
+				'.main-navigation a,
+				.footer-menu,
+				.footer-menu ul li a,
+				.site-footer' => array(
+					'color' => '%1$s',
+				),
+				'.menu-toggle div' => array(
+					'background-color' => '%1$s',
+				),
+				'th, td, hr, code, pre, .wp-caption' => array(
+					'border-color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'.footer-menu ul li a:active, .footer-menu ul li a:focus, .footer-menu ul li a:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
+			),
+		),
+		array(
+			'name'    => 'light_text_color',
+			'label'   => esc_html__( 'Light Text Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.hero,
+				.footer-widget-area,
+				.footer-widget-area .widget-title' => array(
 					'color' => '%1$s',
 				),
 			),
