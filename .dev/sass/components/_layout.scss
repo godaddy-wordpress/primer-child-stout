@@ -95,6 +95,12 @@ body {
       @include shift(-10);
     }
   }
+
+  body.page-template-page-builder {
+    #primary {
+      @include span-columns(12);
+    }
+  }
 }
 
 /*

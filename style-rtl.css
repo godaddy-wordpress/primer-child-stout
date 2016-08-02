@@ -856,7 +856,14 @@ body {
   body.layout-three-column-reversed #secondary {
     margin-right: -102.357652023%; }
   body.layout-three-column-reversed #tertiary {
-    margin-right: -85.2980433528%; } }
+    margin-right: -85.2980433528%; }
+  body.page-template-page-builder #primary {
+    float: right;
+    display: block;
+    margin-left: 2.3576520234%;
+    width: 100%; }
+    body.page-template-page-builder #primary:last-child {
+      margin-left: 0; } }
 
 /*
  * Header & Footer Width
