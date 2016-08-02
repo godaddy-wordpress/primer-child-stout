@@ -121,7 +121,7 @@ function stout_colors() {
 	return array(
 		array(
 			'name'    => 'header_textcolor',
-			'default' => '#222222',
+			'default' => '#e3ae30',
 			'css'     => array(
 				'.site-title a, .site-title a:visited' => array(
 					'color' => '%1$s',
@@ -129,84 +129,99 @@ function stout_colors() {
 			),
 			'rgba_css' => array(
 				'.site-title a:hover, .site-title a:visited:hover' => array(
-					'color' => 'rgba(%1$s, 0.75)',
+					'color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
 		array(
 			'name'    => 'background_color',
-			'default' => '#f9f9f9',
+			'default' => '#fff',
+			'css'     => array(
+				'body' => array(
+					'background' => '%1$s',
+				),
+			),
 		),
 		array(
 			'name'    => 'header_background_color',
 			'label'   => esc_html__( 'Header Background Color', 'primer' ),
-			'default' => '#f9f9f9',
+			'default' => '#fff',
 			'css'     => array(
-				'.site-header' => array(
+				'.site-header-wrapper' => array(
 					'background-color' => '%1$s',
 				),
 			),
 		),
 		array(
-			'name'    => 'tagline_text_color',
-			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-			'default' => '#7c7c7c',
+			'name'    => 'hero_background_color',
+			'label'   => esc_html__( 'Hero Background Color', 'primer' ),
+			'default' => '#404c4e',
 			'css'     => array(
-				'.site-description' => array(
-					'color' => '%1$s',
+				'.hero' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),
 		array(
-			'name'    => 'menu_background_color',
-			'label'   => esc_html__( 'Menu Background Color', 'primer' ),
-			'default' => '#222222',
+			'name'    => 'footer_background_color',
+			'label'   => esc_html__( 'Footer Background Color', 'primer' ),
+			'default' => '#404c4e',
 			'css'     => array(
-				'.main-navigation-container, .main-navigation, .main-navigation li a, .main-navigation li.menu-item-has-children ul' => array(
+				'.site-footer' => array(
 					'background-color' => '%1$s',
 				),
-				'.main-navigation li a, .main-navigation li a:hover' => array(
-					'color' => '#ffffff',
+			),
+		),
+		array(
+			'name'    => 'site_info_background_color',
+			'label'   => esc_html__( 'Site Info Background Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.site-info-wrapper' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),
 		array(
 			'name'    => 'link_color',
 			'label'   => esc_html__( 'Link Color', 'primer' ),
-			'default' => '#1585cf',
+			'default' => '#e3ae30',
 			'css'     => array(
-				'a, a:visited, .entry-footer a, .sticky .entry-title a:before' => array(
+				'a' => array(
 					'color' => '%1$s',
 				),
-				'button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"], .site-info-wrapper .site-info .social-menu a' => array(
+				'.button,
+				input[type="button"],
+				input[type="reset"],
+				input[type="submit"]' => array(
 					'background-color' => '%1$s',
+				),
+				'.comments-area .comment' => array(
+					'border-color' => '%1$s',
 				),
 			),
 			'rgba_css' => array(
-				'a:hover, a:visited:hover, .entry-footer a:hover' => array(
-					'color' => 'rgba(%1$s, 0.75)',
+				'a:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
 				),
-				'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .site-info-wrapper:hover .site-info:hover .social-menu a:hover' => array(
-					'background-color' => 'rgba(%1$s, 0.75)',
+				'.button:hover,
+				input[type="button"]:hover,
+				input[type="reset"]:hover,
+				input[type="submit"]:hover,
+				button:focus,
+				input[type="button"]:focus,
+				input[type="reset"]:focus,
+				input[type="submit"]:focus' => array(
+					'background-color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
 		array(
 			'name'    => 'main_text_color',
 			'label'   => esc_html__( 'Main Text Color', 'primer' ),
-			'default' => '#1a1a1a',
+			'default' => '#252f31',
 			'css'     => array(
-				'.site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6, .site-content p, .site-content blockquote, legend' => array(
-					'color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'secondary_text_color',
-			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
-			'default' => '#686868',
-			'css'     => array(
-				'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
+				'body' => array(
 					'color' => '%1$s',
 				),
 			),
