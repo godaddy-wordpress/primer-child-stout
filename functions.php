@@ -20,13 +20,13 @@ add_action( 'after_setup_theme', 'stout_move_primary_navigation', 20 );
  * @action after_setup_theme
  * @since 1.0.0
  */
-function stout_add_site_header() {
+function stout_add_hero() {
 
-	remove_action( 'primer_header', 'primer_add_site_header', 10 );
-	add_action( 'primer_after_header', 'primer_add_site_header', 10 );
+	remove_action( 'primer_header', 'primer_add_hero', 10 );
+	add_action( 'primer_after_header', 'primer_add_hero', 10 );
 
 }
-add_action( 'after_setup_theme', 'stout_add_site_header' );
+add_action( 'after_setup_theme', 'stout_add_hero' );
 
 
 /**
