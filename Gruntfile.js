@@ -127,7 +127,7 @@ module.exports = function(grunt) {
 				}
 			},
 			options: {
-				sourceMap: true,
+				sourceMap: false,
 				includePaths: [
 					require("bourbon").includePaths,
 					require("bourbon-neat").includePaths,
@@ -142,11 +142,26 @@ module.exports = function(grunt) {
 				expand: true,
 				src: [
 					'node_modules/social-logos/icon-font/*.eot',
-					'node_modules/social-logos/icon-font/*.woff2'
+					'node_modules/social-logos/icon-font/*.woff2',
+					'node_modules/social-logos/icon-font/*.ttf'
 				],
 				dest: 'assets/fonts',
 				filter: 'isFile',
 				flatten: true
+			}
+		},
+
+		'string-replace': {
+			dist: {
+				files: {
+					'style.css': 'style.css',
+				},
+				options: {
+					replacements: [{
+						pattern: /social-logos.(eot|ttf|woff2)/ig,
+						replacement: 'assets/fonts/social-logos.$1'
+					}]
+				}
 			}
 		},
 
@@ -166,7 +181,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: '.dev/sass/**/*.scss',
-				tasks: ['sass','autoprefixer','cssjanus']
+				tasks: ['sass','autoprefixer','cssjanus', 'string-replace']
 			},
 			scripts: {
 				files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
