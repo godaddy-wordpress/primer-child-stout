@@ -21,7 +21,7 @@ body {
 #content {
   @include outer-container;
   font-size: 1.25em;
-  padding: $base-spacing 1em;
+  padding: $base-spacing * 2.5 1em;
 }
 
 /**
@@ -96,9 +96,11 @@ body {
     }
   }
 
-  body.page-template-page-builder {
+  body.page-template-page-builder,
+  body.page-template-page-builder-no-header{
     #primary {
-      @include span-columns(12);
+      max-width: 100%;
+      width: 100%;
     }
   }
 }

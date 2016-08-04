@@ -74,6 +74,10 @@
         padding: 0 em(12.5);
       }
 
+      &:last-of-type a{
+        padding-right: em(25);
+      }
+
       &.menu-item-has-children:hover > .sub-menu {
         display: block;
       }

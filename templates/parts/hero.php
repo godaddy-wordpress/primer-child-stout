@@ -16,6 +16,8 @@
 
 		<?php endif; ?>
 
+		<?php do_action( 'stout_hero' ); ?>
+
 	</div>
 
 </div>

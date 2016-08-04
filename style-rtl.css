@@ -763,7 +763,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.25em;
-  padding: 1.5em 1em; }
+  padding: 3.75em 1em; }
   #content::after {
     clear: both;
     content: "";
@@ -857,13 +857,10 @@ body {
     margin-right: -102.357652023%; }
   body.layout-three-column-reversed #tertiary {
     margin-right: -85.2980433528%; }
-  body.page-template-page-builder #primary {
-    float: right;
-    display: block;
-    margin-left: 2.3576520234%;
-    width: 100%; }
-    body.page-template-page-builder #primary:last-child {
-      margin-left: 0; } }
+  body.page-template-page-builder #primary,
+  body.page-template-page-builder-no-header #primary {
+    max-width: 100%;
+    width: 100%; } }
 
 /*
  * Header & Footer Width
@@ -1250,7 +1247,7 @@ blockquote {
   font-size: 1.333em;
   height: 100px;
   line-height: 100px;
-  margin: 0 .75em 0 0;
+  margin: 0 1.25em 0 0;
   text-transform: uppercase; }
 
 .site-description {
@@ -1260,11 +1257,15 @@ blockquote {
   color: #ffffff;
   font-size: 1em;
   margin-top: -100px;
-  min-height: 400px;
+  min-height: 300px;
   width: 100%;
   padding-top: 100px; }
   .hero .widget {
     margin: 0 0 1.5em; }
+  .hero .page-title {
+    padding: 1.5em 0;
+    margin: 0;
+    text-align: center; }
   .hero .widget_text {
     padding: 3em 0; }
     .hero .widget_text p {
@@ -1346,6 +1347,8 @@ blockquote {
         height: 100px;
         line-height: 100px;
         padding: 0 0.78125em; }
+      .main-navigation li:last-of-type a {
+        padding-left: 1.5625em; }
       .main-navigation li.menu-item-has-children:hover > .sub-menu {
         display: block; }
     .main-navigation .sub-menu {
@@ -1382,7 +1385,7 @@ blockquote {
         padding-right: 1em; } }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 3.75em; }
 
 .entry-title {
   margin: 0 0 .375em; }

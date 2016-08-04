@@ -1,6 +1,26 @@
 <?php
 
 /**
+ * Move titles above menu templates.
+ *
+ * @since 1.0.0
+ */
+function stout_remove_titles(){
+
+	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+
+	if( ! is_front_page() ):
+		add_action( 'stout_hero', 'primer_add_page_builder_template_title' );
+		add_action( 'stout_hero', 'primer_add_blog_title' );
+		add_action( 'stout_hero', 'primer_add_archive_title' );
+	endif;
+
+}
+add_action( 'init', 'stout_remove_titles' );
+
+/**
  * Display primary navigation menu after the header.
  *
  * @action after_setup_theme
@@ -27,7 +47,6 @@ function stout_add_hero() {
 
 }
 add_action( 'after_setup_theme', 'stout_add_hero' );
-
 
 /**
  * Add additional sidebars
