@@ -839,11 +839,18 @@ body {
   body.layout-three-column-reversed #secondary {
     margin-right: -102.357652023%; }
   body.layout-three-column-reversed #tertiary {
-    margin-right: -85.2980433528%; }
-  body.page-template-page-builder #primary,
-  body.page-template-page-builder-no-header #primary {
-    max-width: 100%;
-    width: 100%; } }
+    margin-right: -85.2980433528%; } }
+
+/*
+ * Page Builder
+ */
+body.page-template-page-builder #content,
+body.page-template-page-builder #primary,
+body.page-template-page-builder-no-header #content,
+body.page-template-page-builder-no-header #primary {
+  padding: 0;
+  max-width: 100%;
+  width: 100%; }
 
 /*
  * Header & Footer Width
