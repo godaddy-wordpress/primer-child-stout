@@ -34,7 +34,7 @@
 .wp-caption {
   display: block;
   padding: $small-spacing;
-  margin-bottom: $small-spacing;
+  margin-bottom: $base-spacing;
   line-height: $base-line-height;
   background-color: $base-background-color;
   border: $base-border;
@@ -42,13 +42,13 @@
 
   > img,
   a > img {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 }
 
 .wp-caption-text {
   font-size: .75em;
+  text-align: center;
 }
 
 // Gallery
