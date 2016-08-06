@@ -1495,6 +1495,9 @@ blockquote {
 .hentry {
   margin: 0 0 3.75em; }
 
+.single .hentry {
+  margin: 0; }
+
 .entry-title {
   margin: 0 0 .375em; }
 

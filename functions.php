@@ -107,7 +107,7 @@ function stout_font_types() {
 	return array(
 		array(
 			'name'    => 'primary_font',
-			'label'   => esc_html__( 'Primary Font', 'primer' ),
+			'label'   => esc_html__( 'Primary Font', 'stout' ),
 			'default' => 'Lato',
 			'css'     => array(
 				'body, h4, h5, h6, input, select, textarea, .footer-widget-area a' => array(
@@ -117,7 +117,7 @@ function stout_font_types() {
 		),
 		array(
 			'name'    => 'secondary_font',
-			'label'   => esc_html__( 'Secondary Font', 'primer' ),
+			'label'   => esc_html__( 'Secondary Font', 'stout' ),
 			'default' => 'Oswald',
 			'css'     => array(
 				'button, input[type="button"], input[type="reset"], input[type="submit"], .button, .comments-area .comment .comment-meta, .comments-area .comment .reply, label, h1, h2, h3, .footer-widget-area,  .footer-widget-area .widget-title, .main-navigation a, .entry-meta, .entry-footer, .nav-links, .widget-area .widget' => array(
@@ -154,6 +154,7 @@ function stout_colors() {
 		),
 		array(
 			'name'    => 'background_color',
+			'label'   => esc_html__( 'Background Color', 'stout' ),
 			'default' => '#ffffff',
 			'css'     => array(
 				'body' => array(
@@ -163,17 +164,18 @@ function stout_colors() {
 		),
 		array(
 			'name'    => 'header_background_color',
-			'label'   => esc_html__( 'Header Background Color', 'primer' ),
+			'label'   => esc_html__( 'Header Background Color', 'stout' ),
 			'default' => '#ffffff',
 			'css'     => array(
-				'.site-header-wrapper' => array(
+				'.site-header-wrapper,
+				.main-navigation .sub-menu' => array(
 					'background-color' => '%1$s',
 				),
 			),
 		),
 		array(
 			'name'    => 'hero_background_color',
-			'label'   => esc_html__( 'Hero Background Color', 'primer' ),
+			'label'   => esc_html__( 'Hero Background Color', 'stout' ),
 			'default' => '#08090a',
 			'css'     => array(
 				'.hero' => array(
@@ -183,7 +185,7 @@ function stout_colors() {
 		),
 		array(
 			'name'    => 'footer_background_color',
-			'label'   => esc_html__( 'Footer Background Color', 'primer' ),
+			'label'   => esc_html__( 'Footer Background Color', 'stout' ),
 			'default' => '#404c4e',
 			'css'     => array(
 				'.site-footer' => array(
@@ -193,7 +195,7 @@ function stout_colors() {
 		),
 		array(
 			'name'    => 'site_info_background_color',
-			'label'   => esc_html__( 'Site Info Background Color', 'primer' ),
+			'label'   => esc_html__( 'Site Info Background Color', 'stout' ),
 			'default' => '#ffffff',
 			'css'     => array(
 				'.site-info-wrapper' => array(
@@ -203,7 +205,7 @@ function stout_colors() {
 		),
 		array(
 			'name'    => 'link_color',
-			'label'   => esc_html__( 'Link Color', 'primer' ),
+			'label'   => esc_html__( 'Link Color', 'stout' ),
 			'default' => '#e3ae30',
 			'css'     => array(
 				'a,
@@ -241,7 +243,7 @@ function stout_colors() {
 		),
 		array(
 			'name'    => 'main_text_color',
-			'label'   => esc_html__( 'Main Text Color', 'primer' ),
+			'label'   => esc_html__( 'Main Text Color', 'stout' ),
 			'default' => '#252f31',
 			'css'     => array(
 				'body' => array(
@@ -251,7 +253,7 @@ function stout_colors() {
 		),
 		array(
 			'name'    => 'secondary_text_color',
-			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
+			'label'   => esc_html__( 'Secondary Text Color', 'stout' ),
 			'default' => '#686868',
 			'css'     => array(
 				'.main-navigation a,
@@ -281,7 +283,7 @@ function stout_colors() {
 		),
 		array(
 			'name'    => 'light_text_color',
-			'label'   => esc_html__( 'Light Text Color', 'primer' ),
+			'label'   => esc_html__( 'Light Text Color', 'stout' ),
 			'default' => '#ffffff',
 			'css'     => array(
 				'.hero,
@@ -304,10 +306,9 @@ add_action( 'primer_colors', 'stout_colors' );
  * @return array
  */
 function stout_color_schemes() {
-
 	return array(
-		'scribbles-2' => array(
-			'label'  => esc_html__( 'Scribbles 2', 'ascension' ),
+		'scribbles_2' => array(
+			'label'  => esc_html__( 'Scribbles 2', 'stout' ),
 			'colors' => array(
 				'header_textcolor'              => '#070a07',
 				'background_color'              => '#FFFFFF',

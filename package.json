@@ -1,14 +1,14 @@
 {
-  "name": "primer",
-  "title": "Primer",
-  "description": "Primer is a modern WordPress theme based on _s.",
+  "name": "stout",
+  "title": "Stout",
+  "description": "Stout is a modern WordPress theme built on Primer.",
   "version": "1.0.0",
   "author": "GoDaddy",
   "license": "GPL-2.0",
-  "repository": "godaddy/wp-primer-theme",
-  "homepage": "https://wordpress.org/themes/primer/",
+  "repository": "LiftUX/stout-theme",
+  "homepage": "https://wordpress.org/themes/stout/",
   "bugs": {
-    "url": "https://github.com/godaddy/wp-primer-theme/issues"
+    "url": "https://github.com/LiftUX/stout-theme/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
