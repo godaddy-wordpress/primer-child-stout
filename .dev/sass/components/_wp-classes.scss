@@ -46,8 +46,50 @@
     margin-right: auto;
   }
 }
+
 .wp-caption-text {
-  padding: $small-spacing;
+  font-size: .75em;
+}
+
+// Gallery
+.gallery {
+  @include row;
+
+  @include media($large-screen) {
+    @for $i from 1 through 9 {
+      &.gallery-columns-#{$i} .gallery-item {
+        @include span-columns(4 of ($i * 4));
+        @include omega(#{$i}n);
+
+        &:nth-child(#{$i}n+1) { clear: both; }
+      }
+    }
+  }
+
+  .gallery-caption {
+    @extend .wp-caption-text;
+  }
+
+  .gallery-item {
+    img, picture {
+      margin: 0;
+    }
+    a {
+      display: block;
+    }
+  }
+
+}
+
+// Sticky
+.sticky {
+  background-color: rgba($secondary-text-color, 0.05);
+  border: 2px solid rgba($secondary-text-color, 0.25);
+  padding: $base-spacing;
+
+  .entry-footer {
+    margin-bottom: 0;
+  }
 }
 
 // Text meant only for screen readers
@@ -78,4 +120,3 @@
   width: auto;
   z-index: 100000; /* Above WP toolbar. */
 }
-

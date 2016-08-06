@@ -218,7 +218,8 @@ function stout_colors() {
 				input[type="submit"]' => array(
 					'background-color' => '%1$s',
 				),
-				'.comments-area .comment' => array(
+				'.comments-area .comment.bypostauthor,
+				input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus' => array(
 					'border-color' => '%1$s',
 				),
 			),
@@ -262,13 +263,19 @@ function stout_colors() {
 				'.menu-toggle div' => array(
 					'background-color' => '%1$s',
 				),
-				'th, td, hr, code, pre, .wp-caption' => array(
+				'th, td, hr, code, pre, .wp-caption, .comments-area .comment' => array(
 					'border-color' => '%1$s',
 				),
 			),
 			'rgba_css' => array(
 				'.footer-menu ul li a:active, .footer-menu ul li a:focus, .footer-menu ul li a:hover' => array(
 					'color' => 'rgba(%1$s, 0.8)',
+				),
+				'.sticky' => array(
+					'background-color' => 'rgba(%1$s, 0.05)',
+				),
+				'.sticky' => array(
+					'border-color' => 'rgba(%1$s, 0.25)',
 				),
 			),
 		),
