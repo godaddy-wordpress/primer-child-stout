@@ -1,6 +1,6 @@
-<?php if ( ! empty( stout_get_custom_header() ) ) : ?>
+<?php if ( primer_has_hero_image() ) : ?>
 
-<div class="hero" style="background:url('<?php echo stout_get_custom_header( ); ?>') no-repeat top center; background-size: cover;">
+<div class="hero" style="background:url('<?php echo primer_get_hero_image(); ?>') no-repeat top center; background-size: cover;">
 
 <?php else : ?>
 
