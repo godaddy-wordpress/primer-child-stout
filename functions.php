@@ -381,3 +381,22 @@ function stout_add_image_size( $images_sizes ) {
 }
 add_filter( 'primer_image_sizes', 'stout_add_image_size' );
 
+/**
+ * Add a default hero image in the header area.
+ *
+ * @package stout
+ * @since   1.0.0
+ *
+ * @param array $array
+ *
+ * @return array
+ */
+function stout_add_default_header_image( $array ) {
+
+	$array['default-image'] = get_stylesheet_directory_uri() . '/assets/img/header.jpg';
+
+	return $array;
+
+}
+add_filter( 'primer_custom_header_args', 'stout_add_default_header_image' );
+

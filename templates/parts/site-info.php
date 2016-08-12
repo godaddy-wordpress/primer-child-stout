@@ -16,7 +16,7 @@
 
 			do_action( 'primer_site_info' );
 
-			?></div><!-- .site-info-text -->
+		?></div><!-- .site-info-text -->
 
 		<?php get_template_part( 'templates/parts/social-navigation' ); ?>
 
