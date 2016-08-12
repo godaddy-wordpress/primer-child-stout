@@ -14,9 +14,11 @@
 
 			<?php dynamic_sidebar( 'hero' ); ?>
 
-		<?php endif; ?>
+		<?php else : ?>
 
-		<?php do_action( 'stout_hero' ); ?>
+			<?php get_template_part( 'templates/parts/page-title' ); ?>
+
+		<?php endif; ?>
 
 	</div>
 

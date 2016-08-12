@@ -5,7 +5,7 @@
  *
  * @since 1.0.0
  */
-function stout_move_element(){
+function stout_move_elements() {
 
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
@@ -15,368 +15,330 @@ function stout_move_element(){
 	add_action( 'primer_after_header', 'primer_add_hero' );
 
 }
-add_action( 'template_redirect', 'stout_move_element' );
+add_action( 'template_redirect', 'stout_move_elements' );
+
+/**
+ * Add a footer menu.
+ *
+ * @filter primer_nav_menus
+ * @since  1.0.0
+ *
+ * @param  array $nav_menus
+ *
+ * @return array
+ */
+function stout_nav_menus( $nav_menus ) {
+
+	$nav_menus['footer'] = esc_html__( 'Footer Menu', 'stout' );
+
+	return $nav_menus;
+
+}
+add_filter( 'primer_nav_menus', 'stout_nav_menus' );
+
+/**
+ * Set images sizes.
+ *
+ * @filter primer_image_sizes
+ * @since  1.0.0
+ *
+ * @param  array $sizes
+ *
+ * @return array
+ */
+function stout_image_sizes( $sizes ) {
+
+	$sizes['primer-hero']['width']  = 2400;
+	$sizes['primer-hero']['height'] = 1300;
+
+	return $sizes;
+
+}
+add_filter( 'primer_image_sizes', 'stout_image_sizes' );
+
+/**
+ * Set custom logo args.
+ *
+ * @filter primer_custom_logo_args
+ * @since  1.0.0
+ *
+ * @param  array $args
+ *
+ * @return array
+ */
+function stout_custom_logo_args( $args ) {
+
+	$args['width']  = 248;
+	$args['height'] = 100;
+
+	return $args;
+
+}
+add_filter( 'primer_custom_logo_args', 'stout_custom_logo_args' );
+
+/**
+ * Set custom header args.
+ *
+ * @action primer_custom_header_args
+ * @since  1.0.0
+ *
+ * @param  array $args
+ *
+ * @return array
+ */
+function stout_custom_header_args( $args ) {
+
+	$args['width']  = 2400;
+	$args['height'] = 1300;
+
+	return $args;
+
+}
+add_filter( 'primer_custom_header_args', 'stout_custom_header_args' );
 
 /**
  * Register sidebar areas.
  *
- * @link    http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @filter primer_sidebars
+ * @since  1.0.0
  *
- * @package stout
- * @since   1.0.0
- *
- * @param array $sidebars
+ * @param  array $sidebars
  *
  * @return array
  */
-function stout_register_sidebars( $sidebars ) {
+function stout_sidebars( $sidebars ) {
 
-	/**
-	 * Register Hero Widget.
-	 */
 	$sidebars['hero'] = array(
 		'name'          => esc_html__( 'Hero', 'stout' ),
-		'id'            => 'hero',
-		'description'   => esc_html__( 'This sidebar is for the hero area.', 'stout' ),
+		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'stout' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	);
 
 	return $sidebars;
 
 }
-add_filter( 'primer_sidebars', 'stout_register_sidebars' );
+add_filter( 'primer_sidebars', 'stout_sidebars' );
 
 /**
- * Register Footer Menu.
+ * Set font types.
  *
- * @package stout
- * @since   1.0.0
+ * @filter primer_font_types
+ * @since  1.0.0
  *
- * @param array $menu
+ * @param array $font_types
  *
  * @return array
  */
-function stout_register_nav_menu( $menu ) {
+function stout_font_types( $font_types ) {
 
-	$menu[ 'footer' ] = __( 'Footer Menu', 'stout' );
+	unset( $font_types['primary_font']['css'] );
 
-	return $menu;
-
-}
-add_filter( 'primer_nav_menus', 'stout_register_nav_menu' );
-
-/**
- * Change Stout font types.
- *
- * @action primer_font_types
- * @since 1.0.0
- * @return array
- */
-function stout_font_types() {
-
-	return array(
+	$overrides = array(
+		'header_font' => array(
+			'default' => 'Oswald',
+			'css'     => array(
+				'.main-navigation ul li a' => array(
+					'font-family' => '"%1$s", sans-serif',
+				),
+			),
+		),
 		'primary_font' => array(
-			'label'   => esc_html__( 'Primary Font', 'stout' ),
 			'default' => 'Lato',
 			'css'     => array(
-				'body, h4, h5, h6, input, select, textarea, .footer-widget-area a' => array(
-					'font-family' => '"%s", sans-serif',
+				'body,
+				p,
+				ol li,
+				ul li,
+				dl dd,
+				.fl-callout-text' => array(
+					'font-family' => '"%1$s", sans-serif',
 				),
 			),
 		),
 		'secondary_font' => array(
-			'label'   => esc_html__( 'Secondary Font', 'stout' ),
-			'default' => 'Oswald',
-			'css'     => array(
-				'button, input[type="button"], input[type="reset"], input[type="submit"], .button, .comments-area .comment .comment-meta, .comments-area .comment .reply, label, h1, h2, h3, .footer-widget-area,  .footer-widget-area .widget-title, .main-navigation a, .entry-meta, .entry-footer, .nav-links, .widget-area .widget' => array(
-					'font-family' => '"%s", sans-serif',
-				),
-			),
+			'default' => 'Lato',
 		),
 	);
 
+	return primer_array_replace_recursive( $font_types, $overrides );
+
 }
-add_action( 'primer_font_types', 'stout_font_types' );
+add_filter( 'primer_font_types', 'stout_font_types' );
 
 /**
- * Change Stout colors
+ * Set colors.
  *
- * @action primer_colors
- * @since 1.0.0
+ * @filter primer_colors
+ * @since  1.0.0
+ *
+ * @param  array $colors
+ *
  * @return array
  */
-function stout_colors() {
-	return array(
+function stout_colors( $colors ) {
+
+	unset(
+		$colors['header_textcolor']['css'],
+		$colors['header_background_color']['css'],
+		$colors['menu_background_color']['css'],
+		$colors['tagline_text_color']
+	);
+
+	$overrides = array(
 		'header_textcolor' => array(
-			'default' => '#070a07',
+			'default' => '#ffffff',
 			'css'     => array(
-				'.site-title a, .site-title a:visited' => array(
+				'.hero *' => array(
 					'color' => '%1$s',
-				),
-			),
-			'rgba_css' => array(
-				'.site-title a:hover, .site-title a:visited:hover' => array(
-					'color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
 		'background_color' => array(
-			'label'   => esc_html__( 'Background Color', 'stout' ),
 			'default' => '#ffffff',
-			'css'     => array(
-				'body' => array(
-					'background' => '%1$s',
-				),
-			),
 		),
 		'header_background_color' => array(
-			'label'   => esc_html__( 'Header Background Color', 'stout' ),
-			'default' => '#ffffff',
-			'css'     => array(
-				'.site-header-wrapper,
-				.main-navigation .sub-menu' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
-		'hero_background_color' => array(
-			'label'   => esc_html__( 'Hero Background Color', 'stout' ),
-			'default' => '#08090a',
+			'default' => '#eaeaea',
 			'css'     => array(
 				'.hero' => array(
 					'background-color' => '%1$s',
 				),
 			),
 		),
-		'footer_background_color' => array(
-			'label'   => esc_html__( 'Footer Background Color', 'stout' ),
-			'default' => '#404c4e',
-			'css'     => array(
-				'.site-footer' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
-		'site_info_background_color' => array(
-			'label'   => esc_html__( 'Site Info Background Color', 'stout' ),
+		'menu_background_color' => array(
 			'default' => '#ffffff',
 			'css'     => array(
-				'.site-info-wrapper' => array(
+				'.site-header-wrapper,
+				.main-navigation ul ul,
+				.main-navigation .sub-menu' => array(
 					'background-color' => '%1$s',
 				),
 			),
 		),
+		'footer_background_color' => array(
+			'default' => '#404c4e',
+		),
 		'link_color' => array(
-			'label'   => esc_html__( 'Link Color', 'stout' ),
-			'default' => '#e3ae30',
+			'default' => '#e3ad31',
 			'css'     => array(
-				'a,
+				'.site-title a,
+				.site-title a:visited,
+				.main-navigation ul li a:hover,
+				.main-navigation .current_page_item > a,
 				.main-navigation .current-menu-item > a,
-                .main-navigation a:hover,
-                .screen-reader-text:focus' => array(
+				.main-navigation .current_page_ancestor > a,
+				.main-navigation .current_page_parent > a,
+				.main-navigation .current-menu-ancestor > a' => array(
 					'color' => '%1$s',
-				),
-				'.button,
-				input[type="button"],
-				input[type="reset"],
-				input[type="submit"]' => array(
-					'background-color' => '%1$s',
-				),
-				'.comments-area .comment.bypostauthor,
-				input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus' => array(
-					'border-color' => '%1$s',
 				),
 			),
 			'rgba_css' => array(
-				'a:hover' => array(
+				'.site-title a:hover,
+				.site-title a:visited:hover' => array(
 					'color' => 'rgba(%1$s, 0.8)',
-				),
-				'.button:hover,
-				input[type="button"]:hover,
-				input[type="reset"]:hover,
-				input[type="submit"]:hover,
-				button:focus,
-				input[type="button"]:focus,
-				input[type="reset"]:focus,
-				input[type="submit"]:focus' => array(
-					'background-color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
 		'main_text_color' => array(
-			'label'   => esc_html__( 'Main Text Color', 'stout' ),
 			'default' => '#252f31',
-			'css'     => array(
-				'body' => array(
-					'color' => '%1$s',
-				),
-			),
 		),
 		'secondary_text_color' => array(
-			'label'   => esc_html__( 'Secondary Text Color', 'stout' ),
+			'default' => '#797979',
+		),
+		'menu_text_color' => array(
+			'label'   => esc_html( 'Menu Text Color', 'stout' ),
 			'default' => '#686868',
 			'css'     => array(
-				'.main-navigation a,
-				.footer-menu,
-				.footer-menu ul li a,
-				.site-footer' => array(
+				'.main-navigation ul li a' => array(
 					'color' => '%1$s',
 				),
-				'.menu-toggle div' => array(
-					'background-color' => '%1$s',
-				),
-				'th, td, hr, code, pre, .wp-caption, .comments-area .comment' => array(
-					'border-color' => '%1$s',
-				),
-			),
-			'rgba_css' => array(
-				'.footer-menu ul li a:active, .footer-menu ul li a:focus, .footer-menu ul li a:hover' => array(
-					'color' => 'rgba(%1$s, 0.8)',
-				),
-				'.sticky' => array(
-					'background-color' => 'rgba(%1$s, 0.05)',
-				),
-				'.sticky' => array(
-					'border-color' => 'rgba(%1$s, 0.25)',
-				),
-			),
-		),
-		'light_text_color' => array(
-			'label'   => esc_html__( 'Light Text Color', 'stout' ),
-			'default' => '#ffffff',
-			'css'     => array(
-				'.hero,
-				.footer-widget-area,
-				.footer-widget-area .widget-title' => array(
-					'color' => '%1$s',
+				'.main-navigation .sub-menu li.menu-item-has-children > a::after' => array(
+					'border-left-color'  => '%1$s',
+					'border-right-color' => '%1$s', // RTL
 				),
 			),
 		),
 	);
 
-}
-add_action( 'primer_colors', 'stout_colors' );
+	return primer_array_replace_recursive( $colors, $overrides );
 
+}
+add_filter( 'primer_colors', 'stout_colors' );
 
 /**
- * Change color schemes
+ * Set color schemes.
  *
- * @action primer_color_schemes
- * @since 1.0.0
+ * @filter primer_color_schemes
+ * @since  1.0.0
+ *
+ * @param  array $color_schemes
+ *
  * @return array
  */
-function stout_color_schemes() {
+function stout_color_schemes( $color_schemes ) {
 
-	return array(
-		'red' => array(
-			'label'  => esc_html__( 'Red', 'stout' ),
-			'colors' => array(
-				'header_textcolor'              => '#070a07',
-				'background_color'              => '#FFFFFF',
-				'header_background_color'       => '#FFFFFF',
-				'hero_background_color'         => '#08090a',
-				'footer_background_color'       => '#252f31',
-				'site_info_background_color'    => '#ffffff',
-				'link_color'                    => '#d52e37',
-				'main_text_color'               => '#252f31',
-				'secondary_text_color'          => '#252f31',
-				'light_text_color'              => '#ffffff',
-			),
-		),
+	$color_schemes = array(
 		'blue' => array(
 			'label'  => esc_html__( 'Blue', 'stout' ),
 			'colors' => array(
-				'header_textcolor'              => '#070a07',
-				'background_color'              => '#FFFFFF',
-				'header_background_color'       => '#FFFFFF',
-				'hero_background_color'         => '#2e84d5',
-				'footer_background_color'       => '#252b31',
-				'site_info_background_color'    => '#ffffff',
-				'link_color'                    => '#2e84d5',
-				'main_text_color'               => '#252b31',
-				'secondary_text_color'          => '#252b31',
-				'light_text_color'              => '#ffffff',
-			),
-		),
-		'orange' => array(
-			'label'  => esc_html__( 'Orange', 'stout' ),
-			'colors' => array(
-				'header_textcolor'              => '#070a07',
-				'background_color'              => '#FFFFFF',
-				'header_background_color'       => '#FFFFFF',
-				'hero_background_color'         => '#df962d',
-				'footer_background_color'       => '#323130',
-				'site_info_background_color'    => '#ffffff',
-				'link_color'                    => '#df962d',
-				'main_text_color'               => '#323130',
-				'secondary_text_color'          => '#323130',
-				'light_text_color'              => '#ffffff',
+				'header_textcolor'        => '#2e84d5',
+				'background_color'        => '#ffffff',
+				'header_background_color' => '#252f31',
+				'menu_background_color'   => '#ffffff',
+				'footer_background_color' => '#404c4e',
+				'link_color'              => '#2e84d5',
+				'main_text_color'         => '#252b31',
+				'secondary_text_color'    => '#252b31',
+				'menu_text_color'         => '#686868',
 			),
 		),
 		'green' => array(
 			'label'  => esc_html__( 'Green', 'stout' ),
 			'colors' => array(
-				'header_textcolor'              => '#070a07',
-				'background_color'              => '#FFFFFF',
-				'header_background_color'       => '#FFFFFF',
-				'hero_background_color'         => '#48c16a',
-				'footer_background_color'       => '#414a44',
-				'site_info_background_color'    => '#ffffff',
-				'link_color'                    => '#48c16a',
-				'main_text_color'               => '#414a44',
-				'secondary_text_color'          => '#414a44',
-				'light_text_color'              => '#ffffff',
+				'header_textcolor'        => '#48c16a',
+				'background_color'        => '#ffffff',
+				'header_background_color' => '#252b31',
+				'menu_background_color'   => '#ffffff',
+				'footer_background_color' => '#404c4e',
+				'link_color'              => '#48c16a',
+				'main_text_color'         => '#252b31',
+				'secondary_text_color'    => '#252b31',
+				'menu_text_color'         => '#686868',
 			),
 		),
 		'purple' => array(
 			'label'  => esc_html__( 'Purple', 'stout' ),
 			'colors' => array(
-				'header_textcolor'              => '#070a07',
-				'background_color'              => '#FFFFFF',
-				'header_background_color'       => '#FFFFFF',
-				'hero_background_color'         => '#b752a3',
-				'footer_background_color'       => '#423c41',
-				'site_info_background_color'    => '#ffffff',
-				'link_color'                    => '#b752a3',
-				'main_text_color'               => '#423c41',
-				'secondary_text_color'          => '#423c41',
-				'light_text_color'              => '#ffffff',
+				'header_textcolor'        => '#b752a3',
+				'background_color'        => '#ffffff',
+				'header_background_color' => '#252b31',
+				'menu_background_color'   => '#ffffff',
+				'footer_background_color' => '#404c4e',
+				'link_color'              => '#b752a3',
+				'main_text_color'         => '#252b31',
+				'secondary_text_color'    => '#252b31',
+				'menu_text_color'         => '#686868',
+			),
+		),
+		'red' => array(
+			'label'  => esc_html__( 'Red', 'stout' ),
+			'colors' => array(
+				'header_textcolor'        => '#d52e37',
+				'background_color'        => '#ffffff',
+				'header_background_color' => '#252f31',
+				'menu_background_color'   => '#ffffff',
+				'footer_background_color' => '#252f31',
+				'link_color'              => '#d52e37',
+				'main_text_color'         => '#252f31',
+				'secondary_text_color'    => '#252f31',
+				'menu_text_color'         => '#686868',
 			),
 		),
 	);
 
-}
-add_action( 'primer_color_schemes', 'stout_color_schemes' );
-
-/**
- * Add image size for hero image
- *
- * @package stout
- * @since   1.0.0
- * @link    https://codex.wordpress.org/Function_Reference/add_image_size
- *
- * @param array $images_sizes
- *
- * @return array
- */
-function stout_add_image_size( $images_sizes ) {
-
-	$images_sizes['primer-hero'] = array(
-		'width'  => 1060,
-		'height' => 550,
-		'crop'   => array( 'center', 'center' ),
-	);
-
-	$images_sizes['primer-hero-2x'] = array(
-		'width'  => 2120,
-		'height' => 1100,
-		'crop'   => array( 'center', 'center' ),
-	);
-
-	return $images_sizes;
+	return $color_schemes;
 
 }
-add_filter( 'primer_image_sizes', 'stout_add_image_size' );
+add_filter( 'primer_color_schemes', 'stout_color_schemes' );
