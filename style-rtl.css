@@ -991,12 +991,12 @@ h6 {
 p {
   margin: 0 0 0.75em; }
 
-a {
+a, a:visited {
   color: #e3ae30;
   text-decoration: none;
   -webkit-transition: color 150ms ease;
   transition: color 150ms ease; }
-  a:active, a:focus, a:hover {
+  a:active, a:focus, a:hover, a:visited:active, a:visited:focus, a:visited:hover {
     color: #aa8324; }
 
 hr {
@@ -1397,39 +1397,35 @@ blockquote {
 
 .hero {
   color: #ffffff;
-  font-size: 1em;
   margin-top: -100px;
   min-height: 300px;
   width: 100%;
   padding-top: 100px; }
+  .hero .container {
+    max-width: 75%;
+    padding: 6% 0; }
+    @media screen and (max-width: 900px) {
+      .hero .container {
+        max-width: none;
+        padding: 9% 1.5em; } }
   .hero .widget {
-    margin: 0 0 1.5em; }
-  .hero .page-title {
-    padding: 1.5em 0;
-    margin: 0;
-    text-align: center; }
-  .hero .widget_text {
-    padding: 3em 0; }
-    .hero .widget_text p {
-      margin: 0 0 2.25em 0; }
-      .hero .widget_text p:last-child {
-        margin: 0; }
-    .hero .widget_text code,
-    .hero .widget_text pre {
-      background: none;
-      border: none; }
-    .hero .widget_text .button {
-      font-size: 1.333em; }
-  @media screen and (min-width: 900px) {
-    .hero {
-      font-size: 1.125em; }
-      .hero .widget_text {
-        padding: 9em 0 9em 45%; }
-        .hero .widget_text h1 {
-          font-size: 5.722em;
-          margin: 0; }
-        .hero .widget_text p {
-          margin: 0 0 .75em 0; } }
+    margin-bottom: 1em;
+    font-size: 2em;
+    font-weight: 300; }
+    .hero .widget::last-child {
+      margin-bottom: 0; }
+    @media screen and (max-width: 900px) {
+      .hero .widget {
+        font-size: 1.5em; } }
+    .hero .widget ul, .hero .widget ol {
+      padding-right: 0; }
+      .hero .widget ul li, .hero .widget ol li {
+        list-style: none; }
+    .hero .widget input, .hero .widget select, .hero .widget textarea {
+      color: #252f31; }
+  .hero label, .hero input, .hero select, .hero textarea {
+    display: inline;
+    width: auto; }
 
 .menu-toggle {
   display: block;

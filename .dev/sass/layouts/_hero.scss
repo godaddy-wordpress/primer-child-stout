@@ -1,58 +1,48 @@
 .hero {
   color: $background-color;
-  font-size: 1em;
   margin-top: -100px;
   min-height: 300px;
   width: 100%;
   padding-top: 100px;
 
+  .container {
+    max-width: 75%;
+    padding: 6% 0;
+
+    @media screen and (max-width: 900px) {
+      max-width: none;
+      padding: 9% 1.5em;
+    }
+  }
+
   .widget {
-    margin: 0 0 $base-spacing;
-  }
+    margin-bottom: 1em;
+    font-size: 2em;
+    font-weight: 300;
 
-  .page-title{
-    padding: 1.5em 0;
-    margin: 0;
-    text-align: center;
-  }
+    &::last-child {
+      margin-bottom: 0;
+    }
 
-  .widget_text {
-    padding: 3em 0;
+    @media screen and (max-width: 900px) {
+      font-size: 1.5em;
+    }
 
-    p {
-      margin: 0 0 2.25em 0;
+    ul, ol {
+      padding-left: 0;
 
-      &:last-child {
-        margin: 0;
+      li {
+        list-style: none;
       }
     }
 
-    code,
-    pre {
-      background: none;
-      border: none;
-    }
-
-    .button {
-      font-size: 1.333em;
+    input, select, textarea {
+      color: $base-font-color;
     }
   }
 
-  @include media($large-screen) {
-    font-size: 1.125em;
-
-    .widget_text {
-      padding: 9em 45% 9em 0;
-
-      h1 {
-        font-size: 5.722em;
-        margin: 0;
-      }
-
-      p {
-        margin: 0 0 .75em 0;
-      }
-    }
+  label, input, select, textarea {
+    display: inline;
+    width: auto;
   }
-
 }
