@@ -2,7 +2,7 @@
 /**
  * Displays the footer site info.
  *
- * @package Scribbles
+ * @package Stout
  */
 ?>
 
@@ -10,13 +10,13 @@
 
 	<div class="site-info">
 
-		<div class="site-info-text">
+		<div class="site-info-text"><?php
 
-			<?php get_template_part( 'templates/parts/footer-navigation' ); ?>
+			get_template_part( 'templates/parts/footer-navigation' );
 
-			<?php printf( _x( 'Built with %1$s by %2$s.', '1. theme name link, 2. theme author link', 'primer' ), '<a href="https://wordpress.org/themes/primer/" rel="designer">Primer</a>', '<a href="https://www.godaddy.com/" rel="designer">GoDaddy</a>' ); ?>
+			do_action( 'primer_site_info' );
 
-		</div><!-- .site-info-text -->
+			?></div><!-- .site-info-text -->
 
 		<?php get_template_part( 'templates/parts/social-navigation' ); ?>
 
