@@ -1408,6 +1408,8 @@ blockquote {
       .hero .container {
         max-width: none;
         padding: 9% 1.5em; } }
+  .hero .page-title {
+    margin-bottom: 0; }
   .hero .widget {
     margin-bottom: 1em;
     font-size: 2em;
