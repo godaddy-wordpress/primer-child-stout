@@ -61,7 +61,7 @@ add_filter( 'primer_sidebars', 'stout_register_sidebars' );
  */
 function stout_register_nav_menu( $menu ) {
 
-	$menu[ 'footer' ] = __( 'Footer Menu', 'activation' );
+	$menu[ 'footer' ] = __( 'Footer Menu', 'stout' );
 
 	return $menu;
 
