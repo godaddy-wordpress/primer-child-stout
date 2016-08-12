@@ -5,52 +5,17 @@
  *
  * @since 1.0.0
  */
-function stout_remove_titles(){
+function stout_move_element(){
 
-	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_page_title' );
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
+	remove_action( 'primer_header',       'primer_add_hero' );
 
-	if ( ! is_front_page() ) {
-
-		add_action( 'stout_hero', 'primer_add_page_builder_template_title' );
-		add_action( 'stout_hero', 'primer_add_blog_title' );
-		add_action( 'stout_hero', 'primer_add_archive_title' );
-
-	}
+	add_action( 'primer_header',       'primer_add_primary_navigation' );
+	add_action( 'primer_after_header', 'primer_add_hero' );
 
 }
-add_action( 'init', 'stout_remove_titles' );
-
-/**
- * Display primary navigation menu after the header.
- *
- * @action after_setup_theme
- * @since  1.0.0
- */
-function stout_move_primary_navigation() {
-
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
-
-	add_action( 'primer_header', 'primer_add_primary_navigation', 20 );
-
-}
-add_action( 'after_setup_theme', 'stout_move_primary_navigation', 20 );
-
-/**
- * Display the hero before the header.
- *
- * @action after_setup_theme
- * @since 1.0.0
- */
-function stout_add_hero() {
-
-	remove_action( 'primer_header', 'primer_add_hero', 10 );
-
-	add_action( 'primer_after_header', 'primer_add_hero', 10 );
-
-}
-add_action( 'after_setup_theme', 'stout_add_hero' );
+add_action( 'template_redirect', 'stout_move_element' );
 
 /**
  * Register sidebar areas.
