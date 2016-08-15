@@ -1,7 +1,7 @@
 {
   "name": "stout",
   "title": "Stout",
-  "description": "Stout is a child theme of Primer with a masculine vibe.",
+  "description": "Stout is a Primer child theme with a masculine vibe.",
   "version": "1.0.0",
   "license": "GPL-2.0",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/godaddy/wp-velux-theme.git"
+    "url": "git://github.com/godaddy/wp-stout-theme.git"
   },
   "author": "GoDaddy",
   "bugs": {
