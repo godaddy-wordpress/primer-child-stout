@@ -29,61 +29,38 @@ function stout_move_elements() {
 add_action( 'template_redirect', 'stout_move_elements' );
 
 /**
- * Set hero element style attribute.
+ * Set hero image target element.
  *
- * @filter primer_hero_style_attr
+ * @filter primer_hero_image_selector
  * @since  1.0.0
  *
  * @return string
  */
-function stout_hero_style_attr() {
+function stout_hero_image_selector() {
 
-	return sprintf(
-		'background: url(%s) no-repeat top center; background-size: cover;',
-		primer_get_hero_image()
-	);
+	return '.hero';
 
 }
-add_filter( 'primer_hero_style_attr', 'stout_hero_style_attr' );
+add_filter( 'primer_hero_image_selector', 'stout_hero_image_selector' );
 
 /**
- * Add a footer menu.
+ * Set the default hero image description.
  *
- * @filter primer_nav_menus
+ * @filter primer_default_hero_images
  * @since  1.0.0
  *
- * @param  array $nav_menus
+ * @param  array $defaults
  *
  * @return array
  */
-function stout_nav_menus( $nav_menus ) {
+function stout_default_hero_images( $defaults ) {
 
-	$nav_menus['footer'] = esc_html__( 'Footer Menu', 'stout' );
+	$defaults['default']['description'] = esc_html__( 'Beer', 'stout' );
 
-	return $nav_menus;
-
-}
-add_filter( 'primer_nav_menus', 'stout_nav_menus' );
-
-/**
- * Set images sizes.
- *
- * @filter primer_image_sizes
- * @since  1.0.0
- *
- * @param  array $sizes
- *
- * @return array
- */
-function stout_image_sizes( $sizes ) {
-
-	$sizes['primer-hero']['width']  = 2400;
-	$sizes['primer-hero']['height'] = 1300;
-
-	return $sizes;
+	return $defaults;
 
 }
-add_filter( 'primer_image_sizes', 'stout_image_sizes' );
+add_filter( 'primer_default_hero_images', 'stout_default_hero_images' );
 
 /**
  * Set custom logo args.
@@ -104,26 +81,6 @@ function stout_custom_logo_args( $args ) {
 
 }
 add_filter( 'primer_custom_logo_args', 'stout_custom_logo_args' );
-
-/**
- * Set custom header args.
- *
- * @action primer_custom_header_args
- * @since  1.0.0
- *
- * @param  array $args
- *
- * @return array
- */
-function stout_custom_header_args( $args ) {
-
-	$args['width']  = 2400;
-	$args['height'] = 1300;
-
-	return $args;
-
-}
-add_filter( 'primer_custom_header_args', 'stout_custom_header_args' );
 
 /**
  * Set font types.
