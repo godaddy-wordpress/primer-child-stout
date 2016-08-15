@@ -24,22 +24,14 @@ add_action( 'template_redirect', 'stout_move_elements' );
  * @filter primer_hero_style_attr
  * @since  1.0.0
  *
- * @param  string $style
- *
  * @return string
  */
-function stout_hero_style_attr( $style ) {
+function stout_hero_style_attr() {
 
-	if ( primer_has_hero_image() ) {
-
-		$style = sprintf(
-			'background: url(%s) no-repeat top center; background-size: cover;',
-			primer_get_hero_image()
-		);
-
-	}
-
-	return $style;
+	return sprintf(
+		'background: url(%s) no-repeat top center; background-size: cover;',
+		primer_get_hero_image()
+	);
 
 }
 add_filter( 'primer_hero_style_attr', 'stout_hero_style_attr' );
