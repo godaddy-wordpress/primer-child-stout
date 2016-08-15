@@ -1401,24 +1401,26 @@ blockquote {
   min-height: 300px;
   width: 100%;
   padding-top: 100px; }
-  .hero .container {
-    max-width: 75%;
-    padding: 6% 0; }
+  .hero .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 9% 2em; }
     @media screen and (max-width: 900px) {
-      .hero .container {
-        max-width: none;
-        padding: 9% 1.5em; } }
+      .hero .hero-inner {
+        max-width: none; } }
   .hero .page-title {
     margin-bottom: 0; }
   .hero .widget {
     margin-bottom: 1em;
+    padding-left: 30%;
     font-size: 2em;
     font-weight: 300; }
     .hero .widget::last-child {
       margin-bottom: 0; }
     @media screen and (max-width: 900px) {
       .hero .widget {
-        font-size: 1.5em; } }
+        font-size: 1.5em;
+        padding-left: 0; } }
     .hero .widget ul, .hero .widget ol {
       padding-right: 0; }
       .hero .widget ul li, .hero .widget ol li {

@@ -5,13 +5,13 @@
   width: 100%;
   padding-top: 100px;
 
-  .container {
-    max-width: 75%;
-    padding: 6% 0;
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 9% 2em;
 
     @media screen and (max-width: 900px) {
       max-width: none;
-      padding: 9% 1.5em;
     }
   }
 
@@ -21,6 +21,7 @@
 
   .widget {
     margin-bottom: 1em;
+    padding-right: 30%;
     font-size: 2em;
     font-weight: 300;
 
@@ -30,6 +31,7 @@
 
     @media screen and (max-width: 900px) {
       font-size: 1.5em;
+      padding-right: 0;
     }
 
     ul, ol {

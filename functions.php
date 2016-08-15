@@ -10,7 +10,6 @@ function stout_move_elements() {
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 	remove_action( 'primer_header',       'primer_add_hero' );
-	remove_action( 'primer_hero',         'primer_add_hero_content' );
 
 	add_action( 'primer_header',       'primer_add_primary_navigation' );
 	add_action( 'primer_after_header', 'primer_add_hero' );
@@ -44,19 +43,11 @@ add_filter( 'primer_hero_style_attr', 'stout_hero_style_attr' );
  */
 function stout_add_hero_content() {
 
-	echo '<div class="container">';
-
-	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
-
-		dynamic_sidebar( 'hero' );
-
-	} else {
+	if ( ! is_front_page() ) {
 
 		get_template_part( 'templates/parts/page-title' );
 
 	}
-
-	echo '</div>';
 
 }
 add_action( 'primer_hero', 'stout_add_hero_content' );
