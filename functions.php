@@ -131,7 +131,7 @@ add_filter( 'primer_custom_header_args', 'stout_custom_header_args' );
  * @filter primer_font_types
  * @since  1.0.0
  *
- * @param array $font_types
+ * @param  array $font_types
  *
  * @return array
  */
