@@ -10,12 +10,64 @@ function stout_move_elements() {
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 	remove_action( 'primer_header',       'primer_add_hero' );
+	remove_action( 'primer_hero',         'primer_add_hero_content' );
 
 	add_action( 'primer_header',       'primer_add_primary_navigation' );
 	add_action( 'primer_after_header', 'primer_add_hero' );
 
 }
 add_action( 'template_redirect', 'stout_move_elements' );
+
+/**
+ * Hero element style attribute.
+ *
+ * @filter primer_hero_style_attr
+ * @since  1.0.0
+ *
+ * @param  string $style
+ *
+ * @return string
+ */
+function stout_hero_style_attr( $style ) {
+
+	if ( primer_has_hero_image() ) {
+
+		$style = sprintf(
+			'background: url(%s) no-repeat top center; background-size: cover;',
+			primer_get_hero_image()
+		);
+
+	}
+
+	return $style;
+
+}
+add_filter( 'primer_hero_style_attr', 'stout_hero_style_attr' );
+
+/**
+ * Display hero content.
+ *
+ * @action primer_hero
+ * @since  1.0.0
+ */
+function stout_add_hero_content() {
+
+	echo '<div class="container">';
+
+	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
+
+		dynamic_sidebar( 'hero' );
+
+	} else {
+
+		get_template_part( 'templates/parts/page-title' );
+
+	}
+
+	echo '</div>';
+
+}
+add_action( 'primer_hero', 'stout_add_hero_content' );
 
 /**
  * Add a footer menu.
@@ -95,32 +147,6 @@ function stout_custom_header_args( $args ) {
 
 }
 add_filter( 'primer_custom_header_args', 'stout_custom_header_args' );
-
-/**
- * Register sidebar areas.
- *
- * @filter primer_sidebars
- * @since  1.0.0
- *
- * @param  array $sidebars
- *
- * @return array
- */
-function stout_sidebars( $sidebars ) {
-
-	$sidebars['hero'] = array(
-		'name'          => esc_html__( 'Hero', 'stout' ),
-		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'stout' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	);
-
-	return $sidebars;
-
-}
-add_filter( 'primer_sidebars', 'stout_sidebars' );
 
 /**
  * Set font types.
