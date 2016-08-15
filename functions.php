@@ -1,9 +1,10 @@
 <?php
 
 /**
- * Move titles above menu templates.
+ * Move some elements around.
  *
- * @since 1.0.0
+ * @action template_redirect
+ * @since  1.0.0
  */
 function stout_move_elements() {
 
