@@ -1,11 +1,16 @@
-/*@import "mixins/functions";
-@import "variables/variables";
-@import "mixins/global";
-@import "mixins/color-contrast";
-@import "partials/typography";
-@import "partials/forms";
-@import "partials/alignments";
-@import "partials/content";*/
+@import "normalize";
+@import "bourbon";
+@import "neat";
+
+@import "common/customizer";
+@import "common/variables";
+
+@import "components/typography";
+@import "components/forms";
+@import "components/layout";
+@import "components/buttons";
+@import "components/tables";
+@import "components/wp-classes";
 
 body {
 	margin: 20px;
