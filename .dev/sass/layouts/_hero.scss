@@ -4,6 +4,7 @@
   min-height: 300px;
   width: 100%;
   padding-top: 100px;
+  background-size: cover;
 
   .hero-inner {
     max-width: 1200px;
@@ -32,6 +33,15 @@
     @media screen and (max-width: 900px) {
       font-size: 1.5em;
       padding-right: 0;
+    }
+
+    .widget-title{
+      font-size: 4rem;
+      margin-bottom: .1rem;
+
+      @media screen and (min-width: $medium-screen){
+        font-size: 7rem;
+      }
     }
 
     ul, ol {

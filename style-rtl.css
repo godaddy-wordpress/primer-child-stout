@@ -1400,7 +1400,9 @@ blockquote {
   margin-top: -100px;
   min-height: 300px;
   width: 100%;
-  padding-top: 100px; }
+  padding-top: 100px;
+  -webkit-background-size: cover;
+  background-size: cover; }
   .hero .hero-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -1421,6 +1423,12 @@ blockquote {
       .hero .widget {
         font-size: 1.5em;
         padding-left: 0; } }
+    .hero .widget .widget-title {
+      font-size: 4rem;
+      margin-bottom: .1rem; }
+      @media screen and (min-width: 600px) {
+        .hero .widget .widget-title {
+          font-size: 7rem; } }
     .hero .widget ul, .hero .widget ol {
       padding-right: 0; }
       .hero .widget ul li, .hero .widget ol li {
