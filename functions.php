@@ -8,16 +8,12 @@
  */
 function stout_move_elements() {
 
-	// Hero image
-	remove_action( 'primer_header', 'primer_add_hero' );
-	add_action( 'primer_after_header', 'primer_add_hero' );
-
-	// Primary navigation
+	remove_action( 'primer_header',       'primer_add_hero' );
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
-	add_action( 'primer_header', 'primer_add_primary_navigation' );
-
-	// Page titles
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+
+	add_action( 'primer_after_header', 'primer_add_hero' );
+	add_action( 'primer_header',       'primer_add_primary_navigation' );
 
 	if ( ! is_front_page() ) {
 
@@ -55,7 +51,7 @@ add_filter( 'primer_hero_image_selector', 'stout_hero_image_selector' );
  */
 function stout_default_hero_images( $defaults ) {
 
-	$defaults['default']['description'] = esc_html__( 'Beer', 'stout' );
+	$defaults['default']['description'] = esc_html__( 'Glass of dark beer', 'stout' );
 
 	return $defaults;
 
