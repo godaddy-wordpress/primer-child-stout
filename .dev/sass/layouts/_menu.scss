@@ -17,6 +17,10 @@
   display: none;
   clear: both;
 
+  &.open {
+    display: block;
+  }
+
   ul {
     margin: 0;
     list-style: none;

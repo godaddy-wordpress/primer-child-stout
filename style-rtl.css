@@ -1454,6 +1454,8 @@ blockquote {
 .main-navigation {
   display: none;
   clear: both; }
+  .main-navigation.open {
+    display: block; }
   .main-navigation ul {
     margin: 0;
     list-style: none;
