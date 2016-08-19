@@ -79,6 +79,26 @@ function stout_custom_logo_args( $args ) {
 add_filter( 'primer_custom_logo_args', 'stout_custom_logo_args' );
 
 /**
+ * Set fonts.
+ *
+ * @filter primer_fonts
+ * @since  1.0.0
+ *
+ * @param  array $fonts
+ *
+ * @return array
+ */
+function stout_fonts( $fonts ) {
+
+	$fonts[] = 'Lato';
+	$fonts[] = 'Oswald';
+
+	return $fonts;
+
+}
+add_filter( 'primer_fonts', 'stout_fonts' );
+
+/**
  * Set font types.
  *
  * @filter primer_font_types
@@ -90,29 +110,18 @@ add_filter( 'primer_custom_logo_args', 'stout_custom_logo_args' );
  */
 function stout_font_types( $font_types ) {
 
-	unset( $font_types['primary_font']['css'] );
-
 	$overrides = array(
-		'header_font' => array(
+		'site_title_font' => array(
 			'default' => 'Oswald',
-			'css'     => array(
-				'.main-navigation ul li a' => array(
-					'font-family' => '"%1$s", sans-serif',
-				),
-			),
+		),
+		'navigation_font' => array(
+			'default' => 'Oswald',
+		),
+		'heading_font' => array(
+			'default' => 'Oswald',
 		),
 		'primary_font' => array(
 			'default' => 'Lato',
-			'css'     => array(
-				'body,
-				p,
-				ol li,
-				ul li,
-				dl dd,
-				.fl-callout-text' => array(
-					'font-family' => '"%1$s", sans-serif',
-				),
-			),
 		),
 		'secondary_font' => array(
 			'default' => 'Lato',
@@ -137,84 +146,56 @@ add_filter( 'primer_font_types', 'stout_font_types' );
 function stout_colors( $colors ) {
 
 	unset(
-		$colors['header_textcolor']['css'],
-		$colors['header_background_color']['css'],
-		$colors['menu_background_color']['css'],
-		$colors['tagline_text_color']
+		$colors['content_background_color']
 	);
 
 	$overrides = array(
+		/**
+		 * Text colors
+		 */
 		'header_textcolor' => array(
-			'default' => '#ffffff',
-			'css'     => array(
-				'.hero *' => array(
-					'color' => '%1$s',
-				),
-			),
+			'default'  => '#e3ad31',
 		),
+		'tagline_text_color' => array(
+			'default'  => '#686868',
+		),
+		'menu_text_color' => array(
+			'default' => '#686868',
+		),
+		'footer_widget_text_color' => array(
+			'default' => '#ffffff',
+		),
+		/**
+		 * Link / Button colors
+		 */
+		'link_color' => array(
+			'default'  => '#e3ad31',
+		),
+		'button_color' => array(
+			'default'  => '#e3ad31',
+		),
+		/**
+		 * Background colors
+		 */
 		'background_color' => array(
 			'default' => '#ffffff',
 		),
-		'header_background_color' => array(
-			'default' => '#eaeaea',
-			'css'     => array(
-				'.hero' => array(
-					'background-color' => '%1$s',
-				),
-			),
+		'hero_background_color' => array(
+			'default' => '#686868',
 		),
 		'menu_background_color' => array(
 			'default' => '#ffffff',
 			'css'     => array(
-				'.site-header-wrapper,
-				.main-navigation ul ul,
-				.main-navigation .sub-menu' => array(
+				'.site-header-wrapper' => array(
 					'background-color' => '%1$s',
 				),
 			),
 		),
-		'footer_background_color' => array(
-			'default' => '#404c4e',
-		),
-		'link_color' => array(
-			'default' => '#e3ad31',
-			'css'     => array(
-				'.site-title a,
-				.site-title a:visited,
-				.main-navigation ul li a:hover,
-				.main-navigation .current_page_item > a,
-				.main-navigation .current-menu-item > a,
-				.main-navigation .current_page_ancestor > a,
-				.main-navigation .current_page_parent > a,
-				.main-navigation .current-menu-ancestor > a' => array(
-					'color' => '%1$s',
-				),
-			),
-			'rgba_css' => array(
-				'.site-title a:hover,
-				.site-title a:visited:hover' => array(
-					'color' => 'rgba(%1$s, 0.8)',
-				),
-			),
-		),
-		'main_text_color' => array(
-			'default' => '#252f31',
-		),
-		'secondary_text_color' => array(
-			'default' => '#797979',
-		),
-		'menu_text_color' => array(
-			'label'   => esc_html( 'Menu Text Color', 'stout' ),
+		'footer_widget_background_color' => array(
 			'default' => '#686868',
-			'css'     => array(
-				'.main-navigation ul li a' => array(
-					'color' => '%1$s',
-				),
-				'.main-navigation .sub-menu li.menu-item-has-children > a::after' => array(
-					'border-left-color'  => '%1$s',
-					'border-right-color' => '%1$s', // RTL
-				),
-			),
+		),
+		'footer_background_color' => array(
+			'default' => '#ffffff',
 		),
 	);
 
@@ -235,66 +216,98 @@ add_filter( 'primer_colors', 'stout_colors' );
  */
 function stout_color_schemes( $color_schemes ) {
 
-	$color_schemes = array(
-		'blue' => array(
-			'label'  => esc_html__( 'Blue', 'stout' ),
+	unset( $color_schemes['canary'] );
+
+	$overrides = array(
+		'blush' => array(
 			'colors' => array(
-				'header_textcolor'        => '#2e84d5',
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#252f31',
-				'menu_background_color'   => '#ffffff',
-				'footer_background_color' => '#404c4e',
-				'link_color'              => '#2e84d5',
-				'main_text_color'         => '#252b31',
-				'secondary_text_color'    => '#252b31',
-				'menu_text_color'         => '#686868',
+				'header_textcolor'               => '#b84247',
+				'menu_text_color'                => '#686868',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
-		'green' => array(
-			'label'  => esc_html__( 'Green', 'stout' ),
+		'bronze' => array(
 			'colors' => array(
-				'header_textcolor'        => '#48c16a',
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#252b31',
-				'menu_background_color'   => '#ffffff',
-				'footer_background_color' => '#404c4e',
-				'link_color'              => '#48c16a',
-				'main_text_color'         => '#252b31',
-				'secondary_text_color'    => '#252b31',
-				'menu_text_color'         => '#686868',
+				'header_textcolor'               => '#a0917d',
+				'menu_text_color'                => '#686868',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
-		'purple' => array(
-			'label'  => esc_html__( 'Purple', 'stout' ),
+		'dark' => array(
 			'colors' => array(
-				'header_textcolor'        => '#b752a3',
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#252b31',
-				'menu_background_color'   => '#ffffff',
-				'footer_background_color' => '#404c4e',
-				'link_color'              => '#b752a3',
-				'main_text_color'         => '#252b31',
-				'secondary_text_color'    => '#252b31',
-				'menu_text_color'         => '#686868',
+				'hero_background_color' => '#333333',
+				'menu_background_color' => '#222222',
 			),
 		),
-		'red' => array(
-			'label'  => esc_html__( 'Red', 'stout' ),
+		'iguana' => array(
 			'colors' => array(
-				'header_textcolor'        => '#d52e37',
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#252f31',
-				'menu_background_color'   => '#ffffff',
-				'footer_background_color' => '#252f31',
-				'link_color'              => '#d52e37',
-				'main_text_color'         => '#252f31',
-				'secondary_text_color'    => '#252f31',
-				'menu_text_color'         => '#686868',
+				'header_textcolor'               => '#58ac70',
+				'menu_text_color'                => '#686868',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
+			),
+		),
+		'muted' => array(
+			'colors' => array(
+				'header_textcolor'               => '#5a6175',
+				'menu_text_color'                => '#5a6175',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#d5d6e0',
+				'footer_background_color'        => '#ffffff',
+			),
+		),
+		'plum' => array(
+			'colors' => array(
+				'header_textcolor'               => '#54496d',
+				'menu_text_color'                => '#686868',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
+			),
+		),
+		'rose' => array(
+			'colors' => array(
+				'header_textcolor'               => '#dc8582',
+				'menu_text_color'                => '#686868',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
+			),
+		),
+		'tangerine' => array(
+			'colors' => array(
+				'header_textcolor'               => '#e38f47',
+				'menu_text_color'                => '#686868',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
+			),
+		),
+		'turquoise' => array(
+			'colors' => array(
+				'header_textcolor'               => '#41cfaf',
+				'menu_text_color'                => '#686868',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 	);
 
-	return $color_schemes;
+	return primer_array_replace_recursive( $color_schemes, $overrides );
 
 }
 add_filter( 'primer_color_schemes', 'stout_color_schemes' );
