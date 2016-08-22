@@ -4,7 +4,6 @@
   background-color: $action-color;
   border: 0;
   border-radius: $base-border-radius;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: $secondary-font;
@@ -24,7 +23,6 @@
   &:hover,
   &:focus {
     background-color: shade($action-color, 20%);
-    color: #fff;
   }
 
   &:disabled {
