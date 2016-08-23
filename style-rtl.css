@@ -1550,14 +1550,14 @@ blockquote {
         padding-top: 1.2em;
         padding-bottom: 1.2em; } }
     .main-navigation a:hover, .main-navigation a:visited:hover {
-      background-color: #f2f2f2;
+      background-color: rgba(0, 0, 0, 0.1);
       color: #252f31; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
   .main-navigation .current_page_parent > a,
   .main-navigation .current-menu-ancestor > a {
-    background-color: #f2f2f2; }
+    background-color: rgba(0, 0, 0, 0.1); }
   .main-navigation .sub-menu .menu-item-has-children > a::after {
     position: absolute;
     content: "";
