@@ -203,11 +203,7 @@ function stout_colors( $colors ) {
 		),
 	);
 
-	$overrides = primer_array_replace_recursive( $colors, $overrides );
-
-	unset( $overrides['tagline_text_color'] );
-
-	return $overrides;
+	return primer_array_replace_recursive( $colors, $overrides );
 
 }
 add_filter( 'primer_colors', 'stout_colors' );
