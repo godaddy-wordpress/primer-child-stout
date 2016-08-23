@@ -241,6 +241,13 @@ function stout_color_schemes( $color_schemes ) {
 				'footer_widget_background_color' => '#4e4e4e',
 			),
 		),
+		'cool' => array(
+			'colors' => array(
+				'header_textcolor'               => '#78c3fb',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#4e4e4e',
+			),
+		),
 		'dark' => array(
 			'colors' => array(
 				'link_color'                     => '#e3ad31',
