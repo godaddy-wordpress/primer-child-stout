@@ -19,13 +19,13 @@
  */
 
 // We should load these additional dependencies better.
-@import "social-logos";
 
 @import "common/customizer";
 @import "common/mixins";
 @import "common/variables";
 @import "common/normalize";
 
+@import "components/genericons";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
