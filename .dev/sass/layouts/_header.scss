@@ -1,5 +1,5 @@
 .site-header-wrapper {
-  @include outer-container;
+  @include container($container-size);
   font-size: 1.125em;
   position: relative;
   z-index: 10;
@@ -8,8 +8,8 @@
 .site-title-wrapper {
   float: left;
 
-  @include media($large-screen) {
-    @include span-columns(3);
+  @media #{$large-up} {
+    @include span(3);
   }
 }
 
@@ -21,7 +21,7 @@
   padding: 20px 0 20px 15px;
   display: block;
 
-  @include media($large-screen) {
+  @media #{$large-up} {
     padding: 10px 0 10px 15px;
   }
 }

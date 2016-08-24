@@ -1,6 +1,13 @@
+@import "../../../node_modules/susy/sass/susy";
+
+$susy: (columns: 12, gutters: 1 / 2, math: fluid, gutter-position: split);
+
+// Default container width
+$container-size: 1100px;
+
 // Breakpoints
-$medium-screen: 600px;
-$large-screen: 900px;
+$medium-screen: 40.063em;
+$large-screen: 61.063em;
 
 // Media Queries
 $small-only: "only screen and (max-width: #{$medium-screen})";
@@ -45,3 +52,61 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+
+//************************************************************************//
+// Generate a variable ($all-text-inputs) with a list of all html5
+// input types that have a text-based input, excluding textarea.
+// http://diveintohtml5.org/forms.html
+//************************************************************************//
+$inputs-list: 'input[type="email"]',
+              'input[type="number"]',
+              'input[type="password"]',
+              'input[type="search"]',
+              'input[type="tel"]',
+              'input[type="text"]',
+              'input[type="url"]',
+
+              // Webkit & Gecko may change the display of these in the future
+              'input[type="color"]',
+              'input[type="date"]',
+              'input[type="datetime"]',
+              'input[type="datetime-local"]',
+              'input[type="month"]',
+              'input[type="time"]',
+              'input[type="week"]';
+
+$unquoted-inputs-list: ();
+@each $input-type in $inputs-list {
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
+}
+
+$all-text-inputs: $unquoted-inputs-list;
+
+
+// Hover Pseudo-class
+//************************************************************************//
+$all-text-inputs-hover: ();
+@each $input-type in $unquoted-inputs-list {
+      $input-type-hover: $input-type + ":hover";
+      $all-text-inputs-hover: append($all-text-inputs-hover, $input-type-hover, comma);
+}
+
+// Focus Pseudo-class
+//************************************************************************//
+$all-text-inputs-focus: ();
+@each $input-type in $unquoted-inputs-list {
+      $input-type-focus: $input-type + ":focus";
+      $all-text-inputs-focus: append($all-text-inputs-focus, $input-type-focus, comma);
+}
+
+// You must use interpolation on the variable:
+// #{$all-text-inputs}
+// #{$all-text-inputs-hover}
+// #{$all-text-inputs-focus}
+
+// Example
+//************************************************************************//
+//   #{$all-text-inputs}, textarea {
+//     border: 1px solid red;
+//   }

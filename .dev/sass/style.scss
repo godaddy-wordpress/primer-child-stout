@@ -19,11 +19,10 @@
  */
 
 // We should load these additional dependencies better.
-@import "bourbon";
-@import "neat";
 @import "social-logos";
 
 @import "common/customizer";
+@import "common/mixins";
 @import "common/variables";
 @import "common/normalize";
 

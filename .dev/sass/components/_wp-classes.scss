@@ -1,49 +1,38 @@
 // WordPress Generated Classes
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
-// Media alignment
-.alignnone {
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 100%;
-  height: auto;
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
 }
-.aligncenter {
-  display: block;
-  margin: 0 auto $small-spacing auto;
-  height: auto;
-}
-.alignleft,
+
 .alignright {
-  margin-bottom: $small-spacing;
-  height: auto;
-}
-@include media($large-screen) {
-  // Only float if not on an extra small device
-  .alignleft {
-    float: left;
-    margin-right: $small-spacing
-  }
-  .alignright {
-    float: right;
-    margin-left: $small-spacing;
-  }
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
 }
 
-// Captions
+.aligncenter {
+  clear: both;
+  @include center-block;
+}
+
 .wp-caption {
-  display: block;
-  padding: $small-spacing;
-  margin-bottom: $base-spacing;
-  line-height: $base-line-height;
-  background-color: $base-background-color;
-  border: $base-border;
-  border-radius: $base-border-radius;
+  margin-bottom: 1.5em;
+  max-width: 100%;
 
-  > img,
-  a > img {
-    margin: 0 auto;
+  img[class*="wp-image-"] {
+    @include center-block;
   }
+
+  .wp-caption-text {
+    margin: 0.8075em 0;
+  }
+}
+
+.wp-caption-text {
+  text-align: center;
 }
 
 .wp-caption-text {
@@ -51,34 +40,51 @@
   text-align: center;
 }
 
-// Gallery
 .gallery {
-  @include row;
+  margin-bottom: 1.5em;
+}
 
-  @include media($large-screen) {
-    @for $i from 1 through 9 {
-      &.gallery-columns-#{$i} .gallery-item {
-        @include span-columns(4 of ($i * 4));
-        @include omega(#{$i}n);
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
 
-        &:nth-child(#{$i}n+1) { clear: both; }
-      }
-    }
+  .gallery-columns-2 & {
+    max-width: 50%;
   }
 
-  .gallery-caption {
-    @extend .wp-caption-text;
+  .gallery-columns-3 & {
+    max-width: 33.33%;
   }
 
-  .gallery-item {
-    img, picture {
-      margin: 0;
-    }
-    a {
-      display: block;
-    }
+  .gallery-columns-4 & {
+    max-width: 25%;
   }
 
+  .gallery-columns-5 & {
+    max-width: 20%;
+  }
+
+  .gallery-columns-6 & {
+    max-width: 16.66%;
+  }
+
+  .gallery-columns-7 & {
+    max-width: 14.28%;
+  }
+
+  .gallery-columns-8 & {
+    max-width: 12.5%;
+  }
+
+  .gallery-columns-9 & {
+    max-width: 11.11%;
+  }
+}
+
+.gallery-caption {
+  display: block;
 }
 
 // Sticky
@@ -92,31 +98,35 @@
   }
 }
 
-// Text meant only for screen readers
+/* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
+
+  &:focus {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    @include font-size(0.875);
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
 }
 
-.screen-reader-text:focus {
-  background-color: $base-background-color;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: $action-color;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000; /* Above WP toolbar. */
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
 }

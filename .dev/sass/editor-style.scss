@@ -1,8 +1,6 @@
-@import "bourbon";
-@import "neat";
-
 @import "common/customizer";
 @import "common/variables";
+@import "common/mixins";
 @import "common/normalize";
 
 @import "components/typography";

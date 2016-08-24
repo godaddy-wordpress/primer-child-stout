@@ -197,6 +197,30 @@ function stout_colors( $colors ) {
 		),
 		'footer_widget_background_color' => array(
 			'default' => '#4e4e4e',
+			'css'     => array(
+				'.site-footer .widget' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		'footer_menu_text_color' => array(
+			'default' => '#222222',
+			'css'      => array(
+				'.footer-menu ul li a,
+				.footer-menu ul li a:visited' => array(
+					'color' => '%1$s',
+				),
+				'.site-info-wrapper .social-menu a,
+				.site-info-wrapper .social-menu a:visited' => array(
+					'background-color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'.footer-menu ul li a:hover,
+				.footer-menu ul li a:visited:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
+			),
 		),
 		'footer_background_color' => array(
 			'default' => '#ffffff',

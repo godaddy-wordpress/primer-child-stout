@@ -11,7 +11,7 @@
 }
 
 .main-navigation {
-	@include outer-container;
+	@include container($container-size);
 
 	display: none;
 

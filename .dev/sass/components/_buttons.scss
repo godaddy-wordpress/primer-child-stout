@@ -1,5 +1,8 @@
-#{$all-buttons},
-.button {
+.button,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
   appearance: none;
   background-color: $action-color;
   border: 0;

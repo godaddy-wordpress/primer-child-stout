@@ -7,7 +7,7 @@
   background-size: cover;
 
   .hero-inner {
-    max-width: 1200px;
+    @include container($container-size);
     margin: 0 auto;
     padding: 9% 2em;
 
