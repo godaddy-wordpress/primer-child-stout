@@ -21,12 +21,12 @@
 // We should load these additional dependencies better.
 @import "bourbon";
 @import "neat";
-@import "social-logos";
 
 @import "common/customizer";
 @import "common/variables";
 @import "common/normalize";
 
+@import "components/genericons";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";

@@ -54,19 +54,19 @@
   text-align: center;
 
   @include media($large-screen) {
-    text-align: left;
-
     .site-info-text {
-      @include span-columns(9);
+
     }
     .social-menu {
-      @include span-columns(3);
+
     }
   }
 }
 
 .footer-menu {
   color: $secondary-text-color;
+	text-align: center;
+
   ul {
     list-style: none;
     margin: 0 0 $small-spacing;
@@ -77,6 +77,10 @@
       @include media($large-screen) {
         display: inline-block;
         padding: 0 $base-spacing 0 0;
+
+	      &:last-child {
+		      padding: 0;
+	      }
       }
 
       a {
@@ -94,7 +98,7 @@
 }
 
 .social-menu {
-  margin-top: 1.5em;
+	margin-bottom: 0.75em;
   ul {
     list-style: none;
     margin: 0;
@@ -106,6 +110,6 @@
 
   @include media($large-screen) {
     margin-top: 0;
-    text-align: right;
+    text-align: center;
   }
 }
