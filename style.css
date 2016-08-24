@@ -1640,7 +1640,7 @@ body.no-max-width .main-navigation {
 
 .menu-toggle {
   width: 4rem;
-  padding: 0.6rem;
+  padding: 0.3rem;
   cursor: pointer;
   position: absolute;
   z-index: 9999;
@@ -1648,7 +1648,6 @@ body.no-max-width .main-navigation {
   top: 25px;
   right: 0;
   display: block;
-  padding: 0 9px 24px 0;
   z-index: 99999; }
   @media only screen and (min-width: 40.063em) {
     .menu-toggle {
