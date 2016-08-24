@@ -1,1 +1,0 @@
-#Stout theme
