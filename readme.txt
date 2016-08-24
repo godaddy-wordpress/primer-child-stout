@@ -7,11 +7,11 @@ Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Stout is a Stout child theme with a masculine vibe.
+Stout is a Primer child theme with a masculine vibe.
 
 == Description ==
 
-Stout is a Stout child theme with a masculine vibe.
+Stout is a Primer child theme with a masculine vibe.
 
 **Languages Supported:**
 
