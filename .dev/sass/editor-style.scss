@@ -1,9 +1,9 @@
-@import "normalize";
 @import "bourbon";
 @import "neat";
 
 @import "common/customizer";
 @import "common/variables";
+@import "common/normalize";
 
 @import "components/typography";
 @import "components/forms";
