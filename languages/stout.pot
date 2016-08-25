@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: stout 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-15 17:47-0500\n"
+"POT-Creation-Date: 2016-08-25 08:10-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,44 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: functions.php:58
-msgid "Beer"
-msgstr ""
-
-#: functions.php:244
-msgid "Blue"
-msgstr ""
-
-#: functions.php:258
-msgid "Green"
-msgstr ""
-
-#: functions.php:272
-msgid "Purple"
-msgstr ""
-
-#: functions.php:286
-msgid "Red"
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-file.php:3
-msgid "I'm a translatable string."
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:4
-msgid "Me too"
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:7
-#, php-format
-msgid "I have %d apple"
-msgid_plural "I have %d apples"
-msgstr[0] ""
-msgstr[1] ""
-
-#. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
-msgid "yyyy-mm-dd"
+#: functions.php:54
+msgid "Glass of dark beer"
 msgstr ""
