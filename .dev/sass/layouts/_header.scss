@@ -6,7 +6,10 @@
 }
 
 .site-title-wrapper {
-  float: left;
+
+  @media #{$medium-up} {
+    float: left;
+  }
 
   @media #{$large-up} {
     @include span(3);

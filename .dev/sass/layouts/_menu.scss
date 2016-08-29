@@ -1,26 +1,25 @@
 .main-navigation-container {
 	float: right;
+	position: relative;
 
 	@media #{$small-only} {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 9999;
+		float: none;
 	}
 }
 
 .main-navigation {
 	@include container($container-size);
-
 	display: none;
 
 	&.open {
 		display: block;
-		margin-top: 100px;
 
-		@media #{$medium-up} {
-			margin-top: 0;
+		@media #{$small-only} {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 9999;
 		}
 	}
 
@@ -209,7 +208,7 @@ body.no-max-width .main-navigation {
 	position: absolute;
 	z-index: 9999;
 	display: none;
-	top: 25px;
+	top: -82px;
 	right: 0;
 	display: block;
 	z-index: 99999;

@@ -1413,14 +1413,16 @@ blockquote {
     display: block;
     clear: both; }
 
-.site-title-wrapper {
-  float: right; }
-  @media only screen and (min-width: 61.063em) {
-    .site-title-wrapper {
-      width: 22.22222%;
-      float: right;
-      margin-right: 1.38889%;
-      margin-left: 1.38889%; } }
+@media only screen and (min-width: 40.063em) {
+  .site-title-wrapper {
+    float: right; } }
+
+@media only screen and (min-width: 61.063em) {
+  .site-title-wrapper {
+    width: 22.22222%;
+    float: right;
+    margin-right: 1.38889%;
+    margin-left: 1.38889%; } }
 
 .custom-logo {
   margin: 0;
@@ -1494,14 +1496,11 @@ blockquote {
     width: auto; }
 
 .main-navigation-container {
-  float: left; }
+  float: left;
+  position: relative; }
   @media only screen and (max-width: 40.063em) {
     .main-navigation-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 9999; } }
+      float: none; } }
 
 .main-navigation {
   max-width: 1100px;
@@ -1513,11 +1512,14 @@ blockquote {
     display: block;
     clear: both; }
   .main-navigation.open {
-    display: block;
-    margin-top: 100px; }
-    @media only screen and (min-width: 40.063em) {
+    display: block; }
+    @media only screen and (max-width: 40.063em) {
       .main-navigation.open {
-        margin-top: 0; } }
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 9999; } }
   .main-navigation .expand {
     font-size: 1.8rem;
     color: white;
@@ -1644,7 +1646,7 @@ body.no-max-width .main-navigation {
   position: absolute;
   z-index: 9999;
   display: none;
-  top: 25px;
+  top: -82px;
   left: 0;
   display: block;
   z-index: 99999; }
