@@ -1512,7 +1512,8 @@ blockquote {
     display: block;
     clear: both; }
   .main-navigation.open {
-    display: block; }
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
     @media only screen and (max-width: 40.063em) {
       .main-navigation.open {
         position: absolute;
