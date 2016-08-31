@@ -178,11 +178,6 @@ function stout_colors( $colors ) {
 		),
 		'footer_widget_background_color' => array(
 			'default' => '#4e4e4e',
-			'css'     => array(
-				'.site-footer .widget' => array(
-					'color' => '%1$s',
-				),
-			),
 		),
 		'footer_menu_text_color' => array(
 			'default' => '#252525',
