@@ -1473,7 +1473,7 @@ blockquote {
     padding-right: 30%;
     font-size: 2em;
     font-weight: 300; }
-    .hero .widget::last-child {
+    .hero .widget:last-child {
       margin-bottom: 0; }
     @media screen and (max-width: 900px) {
       .hero .widget {

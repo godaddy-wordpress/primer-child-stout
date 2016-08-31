@@ -1,64 +1,65 @@
 .hero {
-  color: $background-color;
-  margin-top: -100px;
-  min-height: 300px;
-  width: 100%;
-  padding-top: 100px;
-  background-size: cover;
+	color: $background-color;
+	margin-top: -100px;
+	min-height: 300px;
+	width: 100%;
+	padding-top: 100px;
+	background-size: cover;
 
-  .hero-inner {
-    @include container($container-size);
-    margin: 0 auto;
-    padding: 9% 2em;
+	.hero-inner {
+		@include container($container-size);
 
-    @media screen and (max-width: 900px) {
-      max-width: none;
-    }
-  }
+		margin: 0 auto;
+		padding: 9% 2em;
 
-  .page-title {
-    margin-bottom: 0;
-  }
+		@media screen and (max-width: 900px) {
+			max-width: none;
+		}
+	}
 
-  .widget {
-    margin-bottom: 1em;
-    padding-right: 30%;
-    font-size: 2em;
-    font-weight: 300;
+	.page-title {
+		margin-bottom: 0;
+	}
 
-    &::last-child {
-      margin-bottom: 0;
-    }
+	.widget {
+		margin-bottom: 1em;
+		padding-right: 30%;
+		font-size: 2em;
+		font-weight: 300;
 
-    @media screen and (max-width: 900px) {
-      font-size: 1.5em;
-      padding-right: 0;
-    }
+		&:last-child {
+			margin-bottom: 0;
+		}
 
-    .widget-title{
-      font-size: 4rem;
-      margin-bottom: .1rem;
+		@media screen and (max-width: 900px) {
+			font-size: 1.5em;
+			padding-right: 0;
+		}
 
-      @media screen and (min-width: $medium-screen){
-        font-size: 7rem;
-      }
-    }
+		.widget-title {
+			font-size: 4rem;
+			margin-bottom: .1rem;
 
-    ul, ol {
-      padding-left: 0;
+			@media screen and (min-width: $medium-screen) {
+				font-size: 7rem;
+			}
+		}
 
-      li {
-        list-style: none;
-      }
-    }
+		ul, ol {
+			padding-left: 0;
 
-    input, select, textarea {
-      color: $base-font-color;
-    }
-  }
+			li {
+				list-style: none;
+			}
+		}
 
-  label, input, select, textarea {
-    display: inline;
-    width: auto;
-  }
+		input, select, textarea {
+			color: $base-font-color;
+		}
+	}
+
+	label, input, select, textarea {
+		display: inline;
+		width: auto;
+	}
 }
