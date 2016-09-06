@@ -136,10 +136,10 @@ function stout_colors( $colors ) {
 		 * Text colors
 		 */
 		'header_textcolor' => array(
-			'default'  => '#e3ad31',
+			'default' => '#e3ad31',
 		),
 		'tagline_text_color' => array(
-			'default'  => '#686868',
+			'default' => '#686868',
 		),
 		'hero_text_color' => array(
 			'default' => '#ffffff',
@@ -188,13 +188,13 @@ function stout_colors( $colors ) {
 		 * Link / Button colors
 		 */
 		'link_color' => array(
-			'default'  => '#e3ad31',
+			'default' => '#e3ad31',
 		),
 		'button_color' => array(
-			'default'  => '#e3ad31',
+			'default' => '#e3ad31',
 		),
 		'button_text_color' => array(
-			'default'  => '#ffffff',
+			'default' => '#ffffff',
 		),
 		/**
 		 * Background colors
