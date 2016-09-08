@@ -1,30 +1,69 @@
 .hentry {
-  margin: 0 0 $base-spacing * 2.5;
+	margin: 0 0 ($base-spacing * 2.5);
 }
 
-.single .hentry   {
-  margin: 0;
+.single .hentry {
+	margin: 0;
 }
 
 .entry-title {
-  margin: 0 0 .375em;
+	margin: 0 0 .375em;
 }
 
 .entry-meta,
 .entry-footer,
 .nav-links {
-  font-family: $secondary-font;
-  margin: 0 0 $base-spacing;
-  text-transform: uppercase;
+	font-family: $secondary-font;
+	margin: 0 0 $base-spacing;
+	text-transform: uppercase;
+}
+
+.entry-meta {
+	.posted-date,
+	.posted-author,
+	.comments-number {
+		margin-right: 1rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media #{$small-only} {
+			display: block;
+			margin-right: 0;
+		}
+
+		&:before {
+			position: relative;
+			top: 4px;
+			font-family: 'genericons';
+			font-size: 24px;
+			padding-right: 2px;
+		}
+	}
+
+	.posted-date:before {
+		content: '\f303';
+		top: 5px;
+	}
+
+	.posted-author:before {
+		content: '\f304';
+	}
+
+	.comments-number:before {
+		content: '\f300';
+	}
 }
 
 .nav-links {
-  @include clearfix;
+	@include clearfix;
 
-  .nav-previous {
-    float: left;
-  }
-  .nav-next {
-    float: right;
-  }
+	.nav-previous {
+		float: left;
+	}
+
+	.nav-next {
+		float: right;
+	}
 }
