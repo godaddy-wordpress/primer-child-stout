@@ -1,87 +1,87 @@
 fieldset {
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
 legend {
-  font-weight: 600;
-  margin-bottom: $small-spacing / 2;
-  padding: 0;
+	font-weight: 600;
+	margin-bottom: $small-spacing / 2;
+	padding: 0;
 }
 
 label {
-  display: block;
-  font-family: $secondary-font;
-  font-size: em(14);
-  font-weight: 700;
-  margin-bottom: $small-spacing / 2;
-  text-transform: uppercase;
+	display: block;
+	font-family: $secondary-font;
+	font-size: em(14);
+	font-weight: 700;
+	margin-bottom: $small-spacing / 2;
+	text-transform: uppercase;
 }
 
 input,
 select,
 textarea {
-  display: block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+	display: block;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
 }
 
 #{$all-text-inputs} {
-  appearance: none;
-  background-color: $base-background-color;
-  border: $base-border;
-  border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
-  box-sizing: border-box;
-  color: $secondary-text-color;
-  font-size: .9em;
-  margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
-  transition: border-color $base-duration $base-timing;
-  width: 100%;
+	appearance: none;
+	background-color: $base-background-color;
+	border: $base-border;
+	border-radius: $base-border-radius;
+	box-shadow: $form-box-shadow;
+	box-sizing: border-box;
+	color: $secondary-text-color;
+	font-size: .9em;
+	margin-bottom: $small-spacing;
+	padding: $base-spacing / 3;
+	transition: border-color $base-duration $base-timing;
+	width: 100%;
 
-  &:hover {
-    border-color: shade($secondary-text-color, 20%);
-  }
+	&:hover {
+		border-color: shade($secondary-text-color, 20%);
+	}
 
-  &:focus {
-    border-color: $action-color;
-    box-shadow: $form-box-shadow-focus;
-    outline: none;
-  }
+	&:focus {
+		border-color: $action-color;
+		box-shadow: $form-box-shadow-focus;
+		outline: none;
+	}
 
-  &:disabled {
-    background-color: shade($base-background-color, 5%);
-    cursor: not-allowed;
+	&:disabled {
+		background-color: shade($base-background-color, 5%);
+		cursor: not-allowed;
 
-    &:hover {
-      border: $base-border;
-    }
-  }
+		&:hover {
+			border: $base-border;
+		}
+	}
 
-  &::placeholder {
-    color: $secondary-text-color;
-  }
+	&::placeholder {
+		color: $secondary-text-color;
+	}
 }
 
 textarea {
-  resize: vertical;
+	resize: vertical;
 }
 
 [type="checkbox"],
 [type="radio"] {
-  display: inline;
-  margin-right: $small-spacing / 2;
+	display: inline;
+	margin-right: $small-spacing / 2;
 }
 
 [type="file"] {
-  margin-bottom: $small-spacing;
-  width: 100%;
+	margin-bottom: $small-spacing;
+	width: 100%;
 }
 
 select {
-  margin-bottom: $small-spacing;
-  width: 100%;
+	margin-bottom: $small-spacing;
+	width: 100%;
 }

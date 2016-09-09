@@ -1,87 +1,105 @@
 .social-menu {
-  @include clearfix;
-  font-family: 'Genericons';
+	@include clearfix;
 
-  ul {
-    list-style: none;
-    margin: 0 1.25em 0 0;
-    margin: 0 1.25rem 0 0;
-    font-size: 0;
+	font-family: 'Genericons';
 
-    li {
-      display:  inline-block;
-      position: relative;
-      padding: 0;
-      margin: 5px;
-    }
-  }
+	ul {
+		list-style: none;
+		margin: 0 1.25em 0 0;
+		margin: 0 1.25rem 0 0;
+		font-size: 0;
 
-  a {
-    @extend .genericon;
-    @extend .genericon-link;
-    @extend .button;
-    font-family: 'Genericons';
-    font-size: 0;
-    text-indent: -9999em;
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    transition: 200ms opacity;
-    background: transparent;
+		li {
+			display: inline-block;
+			position: relative;
+			padding: 0;
+			margin: 5px;
+		}
+	}
 
-    &:before{
-      -webkit-font-smoothing: subpixel-antialiased;
-      padding: 8px;
-      display: inline-block;
-      font-size: 18px;
-      font-family: 'Genericons';
-    }
-  }
+	a {
+		@extend .genericon;
 
-  a[href*="mailto:"]:before {
-    content: '\f410';
-  }
-  a[href*="wordpress.org"]:before,
-  a[href*="wordpress.com"]:before {
-    content: '\f205';
-  }
-  a[href*="facebook.com"]:before {
-    content: '\f203';
-  }
-  a[href*="twitter.com"]:before {
-    content: '\f202';
-  }
-  a[href*="dribbble.com"]:before {
-    content: '\f201';
-  }
-  a[href*="plus.google.com"]:before {
-    content: '\f206';
-  }
-  a[href*="pinterest.com"]:before {
-    content: '\f210';
-  }
-  a[href*="github.com"]:before {
-    content: '\f200';
-  }
-  a[href*="tumblr.com"]:before {
-    content: '\f214';
-  }
-  a[href*="youtube.com"]:before {
-    content: '\f213';
-  }
-  a[href*="flickr.com"]:before {
-    content: '\f211';
-  }
-  a[href*="vimeo.com"]:before {
-    content: '\f212';
-  }
-  a[href*="instagram.com"]:before {
-    content: '\f215';
-  }
-  a[href*="codepen.io"]:before {
-    content: '\f216';
-  }
-  a[href*="linkedin.com"]:before {
-    content: '\f207';
-  }
+		@extend .genericon-link;
+
+		@extend .button;
+
+		font-family: 'Genericons';
+		font-size: 0;
+		text-indent: -9999em;
+		width: 35px;
+		height: 35px;
+		padding: 0;
+		transition: 200ms opacity;
+		background: transparent;
+
+		&:before {
+			-webkit-font-smoothing: subpixel-antialiased;
+			padding: 8px;
+			display: inline-block;
+			font-size: 18px;
+			font-family: 'Genericons';
+		}
+	}
+
+	a[href*="mailto:"]:before {
+		content: '\f410';
+	}
+
+	a[href*="wordpress.org"]:before,
+	a[href*="wordpress.com"]:before {
+		content: '\f205';
+	}
+
+	a[href*="facebook.com"]:before {
+		content: '\f203';
+	}
+
+	a[href*="twitter.com"]:before {
+		content: '\f202';
+	}
+
+	a[href*="dribbble.com"]:before {
+		content: '\f201';
+	}
+
+	a[href*="plus.google.com"]:before {
+		content: '\f206';
+	}
+
+	a[href*="pinterest.com"]:before {
+		content: '\f210';
+	}
+
+	a[href*="github.com"]:before {
+		content: '\f200';
+	}
+
+	a[href*="tumblr.com"]:before {
+		content: '\f214';
+	}
+
+	a[href*="youtube.com"]:before {
+		content: '\f213';
+	}
+
+	a[href*="flickr.com"]:before {
+		content: '\f211';
+	}
+
+	a[href*="vimeo.com"]:before {
+		content: '\f212';
+	}
+
+	a[href*="instagram.com"]:before {
+		content: '\f215';
+	}
+
+	a[href*="codepen.io"]:before {
+		content: '\f216';
+	}
+
+	a[href*="linkedin.com"]:before {
+		content: '\f207';
+	}
 }
