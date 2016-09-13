@@ -1,22 +1,27 @@
 .wp-pointer-content {
 
+	border: none;
+
 	h3 {
 		font-family: sans-serif;
 		text-transform: inherit;
+		-webkit-font-smoothing: antialiased;
 	}
 
 	p {
 		font-family: sans-serif;
 		font-size: 13px;
 		line-height: 1.4;
+		-webkit-font-smoothing: antialiased;
 	}
 
 	a.close,
 	a.close:visited {
 		color: #0073aa;
-		line-height: 1.5;
+		line-height: 1.6;
 		font-family: sans-serif;
 		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
 
 		&:hover,
 		&:active,
