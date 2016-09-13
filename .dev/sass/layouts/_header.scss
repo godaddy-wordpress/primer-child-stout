@@ -1,42 +1,42 @@
 .site-header-wrapper {
-  @include container($container-size);
-  font-size: 1.125em;
-  position: relative;
-  z-index: 10;
+	@include container($container-size);
+
+	font-size: 1.125em;
+	position: relative;
+	z-index: 10;
 }
 
 .site-title-wrapper {
+	@media #{$medium-up} {
+		float: left;
+	}
 
-  @media #{$medium-up} {
-    float: left;
-  }
-
-  @media #{$large-up} {
-    @include span(3);
-  }
+	@media #{$large-up} {
+		@include span(3);
+	}
 }
 
 .custom-logo {
-  margin: 0;
-  height: 100px;
-  width: auto;
-  max-width: none;
-  padding: 20px 0 20px 15px;
-  display: block;
+	margin: 0;
+	height: 100px;
+	width: auto;
+	max-width: none;
+	padding: 20px 0 20px 15px;
+	display: block;
 
-  @media #{$large-up} {
-    padding: 10px 0 10px 15px;
-  }
+	@media #{$large-up} {
+		padding: 10px 0 10px 15px;
+	}
 }
 
 .site-title {
-  font-size: 1.333em;
-  height: 100px;
-  line-height: 100px;
-  margin: 0 0 0 1.25em;
-  text-transform: uppercase;
+	font-size: 1.333em;
+	height: 100px;
+	line-height: 100px;
+	margin: 0 0 0 1.25em;
+	text-transform: uppercase;
 }
 
 .site-description {
-  display: none;
+	display: none;
 }

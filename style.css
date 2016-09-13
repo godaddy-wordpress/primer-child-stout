@@ -1696,6 +1696,39 @@ body.no-max-width .main-navigation {
   margin: 0 0 1.5em;
   text-transform: uppercase; }
 
+.entry-meta .posted-date,
+.entry-meta .posted-author,
+.entry-meta .comments-number {
+  margin-right: 1rem; }
+  .entry-meta .posted-date:last-child,
+  .entry-meta .posted-author:last-child,
+  .entry-meta .comments-number:last-child {
+    margin-right: 0; }
+  @media only screen and (max-width: 40.063em) {
+    .entry-meta .posted-date,
+    .entry-meta .posted-author,
+    .entry-meta .comments-number {
+      display: block;
+      margin-right: 0; } }
+  .entry-meta .posted-date:before,
+  .entry-meta .posted-author:before,
+  .entry-meta .comments-number:before {
+    position: relative;
+    top: 4px;
+    font-family: 'genericons';
+    font-size: 24px;
+    padding-right: 2px; }
+
+.entry-meta .posted-date:before {
+  content: '\f303';
+  top: 5px; }
+
+.entry-meta .posted-author:before {
+  content: '\f304'; }
+
+.entry-meta .comments-number:before {
+  content: '\f300'; }
+
 .nav-links {
   content: "";
   display: table;

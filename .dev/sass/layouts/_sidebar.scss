@@ -1,27 +1,27 @@
 .widget-area {
-  .widget {
-    margin: 0 0 $base-spacing;
+	.widget {
+		margin: 0 0 $base-spacing;
 
-    .widget-title {
-      font-family: $secondary-font;
-      font-size: 1.6em;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+		.widget-title {
+			font-family: $secondary-font;
+			font-size: 1.6em;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+		ul {
+			list-style: none;
+			padding: 0;
+		}
 
-    &:last-child {
-      margin: 0;
-    }
-  }
+		&:last-child {
+			margin: 0;
+		}
+	}
 }
 
 .widget_recent_entries {
-  .post-date {
-    display: block;
-  }
+	.post-date {
+		display: block;
+	}
 }

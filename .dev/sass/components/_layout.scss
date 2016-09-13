@@ -1,149 +1,149 @@
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 .site-content {
-  @include container($container-size);
+	@include container($container-size);
 
-  margin-top: 2em;
+	margin-top: 2em;
 
-  @media #{$medium-down} {
-    margin-top: 7 / 18 + 1%;
-  }
+	@media #{$medium-down} {
+		margin-top: 7 / 18 + 1%;
+	}
 }
 
 body.no-max-width .site-content,
 body.page-template-page-builder .site-content {
-  max-width: none;
+	max-width: none;
 }
 
 body.layout-one-column-narrow {
-  .site-content,
-  &:not(.home) .hero .hero-inner{
-    @include container( $container-size * .7 );
-  }
+	.site-content,
+	&:not(.home) .hero .hero-inner {
+		@include container($container-size * 0.7);
+	}
 }
 
 .content-area {
-  @include span(first 8);
+	@include span(first 8);
 
-  @media #{$medium-down} {
-    @include span(12);
-  }
+	@media #{$medium-down} {
+		@include span(12);
+	}
 }
 
 #secondary {
-  @include span(last 4);
+	@include span(last 4);
 
-  @media #{$medium-down} {
-    @include span(12);
-  }
+	@media #{$medium-down} {
+		@include span(12);
+	}
 }
 
 #tertiary {
-  display: none;
+	display: none;
 
-  @media #{$medium-down} {
-    @include span(12);
-  }
+	@media #{$medium-down} {
+		@include span(12);
+	}
 }
 
 @media #{$large-up} {
 
-  .layout-one-column-wide,
-  .layout-one-column-narrow {
-    .content-area,
-    #secondary,
-    #tertiary {
-      @include span(12);
-    }
-  }
+	.layout-one-column-wide,
+	.layout-one-column-narrow {
+		.content-area,
+		#secondary,
+		#tertiary {
+			@include span(12);
+		}
+	}
 
-  .layout-two-column-default {
-    .content-area {
-      @include span(first 8);
-    }
+	.layout-two-column-default {
+		.content-area {
+			@include span(first 8);
+		}
 
-    #secondary {
-      @include span(last 4);
-    }
-  }
+		#secondary {
+			@include span(last 4);
+		}
+	}
 
-  .layout-two-column-reversed {
-    .content-area {
-      @include span(last 8);
-    }
+	.layout-two-column-reversed {
+		.content-area {
+			@include span(last 8);
+		}
 
-    #secondary {
-      @include span(first 4);
-    }
-  }
+		#secondary {
+			@include span(first 4);
+		}
+	}
 
-  .layout-three-column-default {
-    .content-area {
-      @include span(first 6);
-    }
+	.layout-three-column-default {
+		.content-area {
+			@include span(first 6);
+		}
 
-    #secondary {
-      @include span(3 at 7);
-    }
+		#secondary {
+			@include span(3 at 7);
+		}
 
-    #tertiary {
-      @include span(last 3);
+		#tertiary {
+			@include span(last 3);
 
-      display: block;
-    }
-  }
+			display: block;
+		}
+	}
 
-  .layout-three-column-reversed {
-    .content-area {
-      @include span(last 6);
-    }
+	.layout-three-column-reversed {
+		.content-area {
+			@include span(last 6);
+		}
 
-    #secondary {
-      @include span(first 3);
-    }
+		#secondary {
+			@include span(first 3);
+		}
 
-    #tertiary {
-      @include span(3 at 4);
+		#tertiary {
+			@include span(3 at 4);
 
-      display: block;
-    }
-  }
+			display: block;
+		}
+	}
 
-  .layout-three-column-center {
-    .content-area {
-      @include span(6 at 4);
+	.layout-three-column-center {
+		.content-area {
+			@include span(6 at 4);
 
-      @include push(3 of 12);
-    }
+			@include push(3 of 12);
+		}
 
-    #secondary {
-      @include span(first 3);
+		#secondary {
+			@include span(first 3);
 
-      @include pull(9 of 12);
-    }
+			@include pull(9 of 12);
+		}
 
-    #tertiary {
-      @include span(last 3);
+		#tertiary {
+			@include span(last 3);
 
-      display: block;
-    }
-  }
+			display: block;
+		}
+	}
 }
 
 body.page-template-page-builder,
 body.page-template-page-builder-no-header {
-  .site-content,
-  .content-area {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-  }
+	.site-content,
+	.content-area {
+		max-width: 100%;
+		width: 100%;
+		margin: 0;
+	}
 }
