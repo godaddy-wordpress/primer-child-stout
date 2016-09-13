@@ -1,5 +1,7 @@
 .wp-pointer-content {
 
+	border-top: none;
+
 	h3 {
 		font-family: sans-serif;
 		text-transform: inherit;
@@ -16,7 +18,7 @@
 	a.close,
 	a.close:visited {
 		color: #0073aa;
-		line-height: 1.6;
+		line-height: 1.5;
 		font-family: sans-serif;
 		font-weight: 400;
 		-webkit-font-smoothing: antialiased;

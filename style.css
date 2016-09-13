@@ -983,7 +983,7 @@ dd {
   margin: 0 0 0.75em; }
 
 .wp-pointer-content {
-  border: none; }
+  border-top: none; }
   .wp-pointer-content h3 {
     font-family: sans-serif;
     text-transform: inherit;
@@ -996,7 +996,7 @@ dd {
   .wp-pointer-content a.close,
   .wp-pointer-content a.close:visited {
     color: #0073aa;
-    line-height: 1.6;
+    line-height: 1.5;
     font-family: sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased; }
