@@ -1178,7 +1178,8 @@ code {
   padding: 5px; }
 
 pre {
-  padding: 1em; }
+  padding: 1em;
+  overflow-x: scroll; }
 
 cite {
   display: inline-block;
@@ -1297,7 +1298,8 @@ blockquote {
   outline: 0; }
 
 .clear,
-.page-content:after {
+.page-content:after,
+.entry-content:after {
   content: "";
   display: table;
   table-layout: fixed;
