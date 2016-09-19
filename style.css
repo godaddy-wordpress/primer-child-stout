@@ -1763,6 +1763,7 @@ body.no-max-width .main-navigation {
   content: '\f300'; }
 
 .nav-links {
+  width: 100%;
   content: "";
   display: table;
   table-layout: fixed; }
