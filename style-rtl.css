@@ -1296,6 +1296,13 @@ blockquote {
 #content[tabindex="-1"]:focus {
   outline: 0; }
 
+.clear,
+.page-content:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both; }
+
 .site-footer {
   background-color: #404c4e; }
 

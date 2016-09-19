@@ -1,0 +1,5 @@
+.clear,
+.page-content:after {
+	@include clearfix;
+	@include clearfix-after;
+}
