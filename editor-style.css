@@ -269,7 +269,8 @@ code {
   padding: 5px; }
 
 pre {
-  padding: 1em; }
+  padding: 1em;
+  overflow-x: scroll; }
 
 cite {
   display: inline-block;

@@ -982,6 +982,30 @@ dt {
 dd {
   margin: 0 0 0.75em; }
 
+.wp-pointer-content {
+  border-top: none; }
+  .wp-pointer-content h3 {
+    font-family: sans-serif;
+    text-transform: inherit;
+    -webkit-font-smoothing: antialiased; }
+  .wp-pointer-content p {
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased; }
+  .wp-pointer-content a.close,
+  .wp-pointer-content a.close:visited {
+    color: #0073aa;
+    line-height: 1.5;
+    font-family: sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased; }
+    .wp-pointer-content a.close:hover, .wp-pointer-content a.close:active, .wp-pointer-content a.close:focus,
+    .wp-pointer-content a.close:visited:hover,
+    .wp-pointer-content a.close:visited:active,
+    .wp-pointer-content a.close:visited:focus {
+      color: #00a0d2; }
+
 figure {
   margin: 0 0 1.5em; }
 
@@ -1154,7 +1178,8 @@ code {
   padding: 5px; }
 
 pre {
-  padding: 1em; }
+  padding: 1em;
+  overflow-x: scroll; }
 
 cite {
   display: inline-block;
@@ -1271,6 +1296,14 @@ blockquote {
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0; }
+
+.clear,
+.page-content:after,
+.entry-content:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both; }
 
 .site-footer {
   background-color: #404c4e; }
@@ -1730,6 +1763,7 @@ body.no-max-width .main-navigation {
   content: '\f300'; }
 
 .nav-links {
+  width: 100%;
   content: "";
   display: table;
   table-layout: fixed; }
