@@ -32,9 +32,10 @@
 .site-title {
 	font-size: 1.333em;
 	height: 100px;
-	line-height: 100px;
 	margin: 0 0 0 1.25em;
 	text-transform: uppercase;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .site-description {
