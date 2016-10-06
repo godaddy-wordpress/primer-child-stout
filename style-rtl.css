@@ -1471,10 +1471,19 @@ blockquote {
 .site-title {
   font-size: 1.333em;
   height: 100px;
+  line-height: 100px;
   margin: 0 1.25em 0 0;
   text-transform: uppercase;
-  display: table-cell;
   vertical-align: middle; }
+  @media only screen and (min-width: 61.063em) {
+    .site-title {
+      display: table-cell;
+      line-height: 1.333em; } }
+  @media only screen and (max-width: 40.063em) {
+    .site-title {
+      display: table-cell;
+      line-height: 1.333em;
+      padding: 0 15px 0 65px; } }
 
 .site-description {
   display: none; }

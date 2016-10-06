@@ -32,10 +32,20 @@
 .site-title {
 	font-size: 1.333em;
 	height: 100px;
+	line-height: 100px;
 	margin: 0 0 0 1.25em;
 	text-transform: uppercase;
-	display: table-cell;
 	vertical-align: middle;
+
+	@media #{$large-up} {
+		display: table-cell;
+		line-height: 1.333em;
+	}
+	@media #{$small-only} {
+		display: table-cell;
+		line-height: 1.333em;
+		padding: 0 65px 0 15px;
+	}
 }
 
 .site-description {
