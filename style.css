@@ -1473,7 +1473,17 @@ blockquote {
   height: 100px;
   line-height: 100px;
   margin: 0 0 0 1.25em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  vertical-align: middle; }
+  @media only screen and (min-width: 61.063em) {
+    .site-title {
+      display: table-cell;
+      line-height: 1.333em; } }
+  @media only screen and (max-width: 40.063em) {
+    .site-title {
+      display: table-cell;
+      line-height: 1.333em;
+      padding: 0 65px 0 15px; } }
 
 .site-description {
   display: none; }
