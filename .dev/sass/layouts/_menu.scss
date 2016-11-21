@@ -26,7 +26,6 @@
 
 	.expand {
 		font-size: 1.8rem;
-		color: white;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -37,10 +36,6 @@
 		border-bottom: none;
 		border-left: 1px solid rgba(0, 0, 0, 0.1);
 		text-indent: 0;
-
-		&:hover {
-			background-color: rgba(0, 0, 0, 0.1);
-		}
 
 		&:before {
 			content: "+";
@@ -164,11 +159,6 @@
 			padding-bottom: 1.2em;
 		}
 
-		&:hover,
-		&:visited:hover {
-			background-color: rgba(0, 0, 0, 0.1);
-			color: $header-textcolor;
-		}
 	}
 
 	.current_page_item > a,

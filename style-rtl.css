@@ -1568,7 +1568,6 @@ blockquote {
         z-index: 9999; } }
   .main-navigation .expand {
     font-size: 1.8rem;
-    color: white;
     position: absolute;
     left: 0;
     top: 0;
@@ -1579,8 +1578,6 @@ blockquote {
     border-bottom: none;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     text-indent: 0; }
-    .main-navigation .expand:hover {
-      background-color: rgba(0, 0, 0, 0.1); }
     .main-navigation .expand:before {
       content: "+"; }
     @media only screen and (min-width: 40.063em) {
@@ -1655,9 +1652,6 @@ blockquote {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         padding-top: 1.2em;
         padding-bottom: 1.2em; } }
-    .main-navigation a:hover, .main-navigation a:visited:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-      color: #252f31; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
