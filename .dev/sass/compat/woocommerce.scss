@@ -54,6 +54,10 @@ ul.site-header-cart.menu {
 
 }
 
+.woocommerce-cart-menu-item:hover {
+	cursor: pointer;
+}
+
 .woocommerce-cart-menu-item .sub-menu {
 	background: transparent;
 }

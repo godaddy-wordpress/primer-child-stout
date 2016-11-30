@@ -1838,6 +1838,9 @@ ul.site-header-cart.menu {
     padding: .5em;
     margin: 0; }
 
+.woocommerce-cart-menu-item:hover {
+  cursor: pointer; }
+
 .woocommerce-cart-menu-item .sub-menu {
   background: transparent; }
 
