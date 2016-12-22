@@ -1540,6 +1540,11 @@ blockquote {
     display: inline;
     width: auto; }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  html :lang(hi) h2.widget-title,
+  html :lang(mr) h2.widget-title {
+    font-family: -webkit-body; } }
+
 .main-navigation-container {
   float: right;
   position: relative; }
