@@ -187,11 +187,19 @@ body.single-product {
 
 }
 
+body.woocommerce-cart {
+
+	.primer-wc-cart-sub-menu {
+		display: none;
+	}
+}
+
 .woocommerce #content table.cart img,
 .woocommerce table.cart img,
 .woocommerce-page #content table.cart img,
 .woocommerce-page table.cart img {
 	width: 100%;
+	max-width: 100px;
 	margin-bottom: 0;
 }
 

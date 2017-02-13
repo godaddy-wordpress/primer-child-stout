@@ -1923,11 +1923,15 @@ body.single-product span.onsale {
 body.single-product .quantity .input-text {
   padding: 8px; }
 
+body.woocommerce-cart .primer-wc-cart-sub-menu {
+  display: none; }
+
 .woocommerce #content table.cart img,
 .woocommerce table.cart img,
 .woocommerce-page #content table.cart img,
 .woocommerce-page table.cart img {
   width: 100%;
+  max-width: 100px;
   margin-bottom: 0; }
 
 .woocommerce #content table.cart td.actions .input-text,
