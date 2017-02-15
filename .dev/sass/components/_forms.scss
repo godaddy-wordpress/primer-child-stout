@@ -28,7 +28,8 @@ textarea {
 	font-size: $base-font-size;
 }
 
-#{$all-text-inputs} {
+#{$all-text-inputs},
+.select2-container .select2-choice {
 	appearance: none;
 	background-color: $base-background-color;
 	border: $base-border;
@@ -64,6 +65,17 @@ textarea {
 	&::placeholder {
 		color: $secondary-text-color;
 	}
+}
+
+.select2-container .select2-choice {
+	padding: 0 $base-spacing / 3;
+}
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+	border-color: $base-border-color;
 }
 
 textarea {
