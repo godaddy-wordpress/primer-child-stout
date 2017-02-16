@@ -1,3 +1,16 @@
+.site-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+	body.admin-bar {
+		.site-header {
+			top: 32px;
+		}
+	}
+
 .site-header-wrapper {
 	@include container($container-size);
 

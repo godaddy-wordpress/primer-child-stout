@@ -1434,6 +1434,15 @@ blockquote {
       margin-top: 0;
       text-align: left; } }
 
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+body.admin-bar .site-header {
+  top: 32px; }
+
 .site-header-wrapper {
   max-width: 1100px;
   margin-left: auto;
@@ -1490,7 +1499,6 @@ blockquote {
 
 .hero {
   color: #ffffff;
-  margin-top: -100px;
   min-height: 300px;
   width: 100%;
   padding-top: 100px;
@@ -1607,11 +1615,7 @@ blockquote {
   @media only screen and (min-width: 40.063em) {
     .main-navigation li {
       position: relative;
-      float: left; }
-      .main-navigation li:first-child > a {
-        border-top: 1px solid rgba(0, 0, 0, 0.1); } }
-  .main-navigation #menu-main-menu > li:first-child > a {
-    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      float: left; } }
   .main-navigation ul {
     list-style: none;
     margin: 0;

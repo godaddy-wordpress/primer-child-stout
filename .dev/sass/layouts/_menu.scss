@@ -87,15 +87,7 @@
 		@media #{$medium-up} {
 			position: relative;
 			float: left;
-
-			&:first-child > a {
-				border-top: 1px solid rgba(0, 0, 0, 0.1);
-			}
 		}
-	}
-
-	#menu-main-menu > li:first-child > a {
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
 	ul {
