@@ -9,6 +9,7 @@
 
 .main-navigation {
 	@include container($container-size);
+
 	display: none;
 
 	&.open {
@@ -150,7 +151,6 @@
 			padding-top: 1.2em;
 			padding-bottom: 1.2em;
 		}
-
 	}
 
 	.current_page_item > a,
