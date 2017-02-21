@@ -1458,9 +1458,11 @@ blockquote {
   top: 0;
   left: 0;
   right: 0; }
-
-body.admin-bar .site-header {
-  top: 32px; }
+  body.admin-bar .site-header {
+    top: 32px; }
+    @media only screen and (max-width: 782px) {
+      body.admin-bar .site-header {
+        top: 46px; } }
 
 .site-header-wrapper {
   max-width: 1100px;
