@@ -1675,7 +1675,8 @@ blockquote {
   .main-navigation a {
     display: block;
     text-decoration: none;
-    padding: 2em 1em;
+    padding: -webkit-calc(2em + 1px) 1em 2em;
+    padding: calc(2em + 1px) 1em 2em;
     color: #252f31; }
     @media only screen and (max-width: 40.063em) {
       .main-navigation a {
