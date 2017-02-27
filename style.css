@@ -1454,7 +1454,6 @@ blockquote {
       text-align: left; } }
 
 .site-header {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0; }
@@ -1522,7 +1521,6 @@ blockquote {
   color: #ffffff;
   min-height: 300px;
   width: 100%;
-  padding-top: 100px;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
