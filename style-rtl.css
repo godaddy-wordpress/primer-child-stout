@@ -1544,7 +1544,7 @@ blockquote {
         font-size: 1.5em;
         padding-left: 0; } }
     .hero .widget .widget-title {
-      font-size: 4rem;
+      font-size: 3.5rem;
       margin-bottom: .1rem; }
       @media screen and (min-width: 40.063em) {
         .hero .widget .widget-title {
@@ -1927,20 +1927,28 @@ body.no-max-width .main-navigation {
     .primer-wc-cart-menu:hover a {
       background: transparent; }
 
-body.post-type-archive,
-body.single-product {
-  /* On Sale Badge */ }
-  body.post-type-archive span.onsale,
-  body.post-type-archive ul.products li.product .onsale,
-  body.single-product span.onsale,
-  body.single-product ul.products li.product .onsale {
-    padding: 2px 8px;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    margin: 0;
-    min-height: auto;
-    min-width: auto;
-    line-height: inherit; }
+body.primer-woocommerce-l10n.woocommerce ul.products li.product .button, body.primer-woocommerce-l10n.woocommerce ul.products li.product .social-menu a, .social-menu body.primer-woocommerce-l10n.woocommerce ul.products li.product a,
+.woocommerce a.added_to_cart {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  display: block; }
+  @media only screen and (min-width: 61.063em) {
+    body.primer-woocommerce-l10n.woocommerce ul.products li.product .button, body.primer-woocommerce-l10n.woocommerce ul.products li.product .social-menu a, .social-menu body.primer-woocommerce-l10n.woocommerce ul.products li.product a,
+    .woocommerce a.added_to_cart {
+      font-size: 0.75rem; } }
+
+body.post-type-archive span.onsale,
+body.post-type-archive ul.products li.product .onsale,
+body.single-product span.onsale,
+body.single-product ul.products li.product .onsale {
+  padding: 2px 8px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  min-height: auto;
+  min-width: auto;
+  line-height: inherit; }
 
 body.single-product span.onsale {
   padding: 3px 18px;
