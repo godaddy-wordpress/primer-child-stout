@@ -203,8 +203,57 @@ body.woocommerce-cart {
 	}
 }
 
-.woocommerce,
 .woocommerce-page {
+
+	div.product {
+
+		.woocommerce-product-gallery {
+
+			figure.woocommerce-product-gallery__wrapper {
+				margin: 0;
+			}
+
+		}
+
+		.summary {
+			margin-top: 0;
+		}
+
+		.commentlist {
+			padding-left: 0;
+		}
+
+	}
+
+	&.woocommerce div.product form.cart {
+		margin: 1em 0;
+	}
+
+	ul.products li.product.primer-2-column-product {
+		width: 48.05%;
+	}
+
+	#reviews #comments ol.commentlist li {
+
+		img.avatar {
+			width: 60px;
+		}
+
+		.comment-text {
+			margin: 0 0 0 80px;
+		}
+
+	}
+
+	form.woocommerce-cart-form {
+
+		table.cart td.actions #coupon_code {
+			width: 55%;
+			margin-right: 0;
+		}
+
+	}
+
 	table.cart {
 		img {
 			width: 100%;
@@ -216,6 +265,7 @@ body.woocommerce-cart {
 			padding: 10px !important;
 		}
 	}
+
 }
 
 .woocommerce ul.products li.product a.add_to_cart_button {
