@@ -254,6 +254,10 @@ body.woocommerce-cart {
 
 	}
 
+	table.variations tr:hover td {
+		background-color: transparent;
+	}
+
 	table.cart {
 		img {
 			width: 100%;

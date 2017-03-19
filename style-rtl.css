@@ -1986,6 +1986,9 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
   width: 55%;
   margin-left: 0; }
 
+.woocommerce-page table.variations tr:hover td {
+  background-color: transparent; }
+
 .woocommerce-page table.cart img {
   width: 100%;
   max-width: 100px;
