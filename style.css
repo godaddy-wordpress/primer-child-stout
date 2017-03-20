@@ -1938,18 +1938,6 @@ body.primer-woocommerce-l10n.woocommerce ul.products li.product .button, body.pr
     .woocommerce a.added_to_cart {
       font-size: 0.75rem; } }
 
-body.post-type-archive span.onsale,
-body.post-type-archive ul.products li.product .onsale,
-body.single-product span.onsale,
-body.single-product ul.products li.product .onsale {
-  padding: 2px 8px;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  margin: 0;
-  min-height: auto;
-  min-width: auto;
-  line-height: inherit; }
-
 body.single-product span.onsale {
   padding: 3px 18px;
   top: 0;
@@ -1975,6 +1963,16 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
 
 .woocommerce-page ul.products li.product.primer-2-column-product {
   width: 48.05%; }
+
+.woocommerce-page span.onsale,
+.woocommerce-page ul.products li.product .onsale {
+  padding: 2px 8px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  min-height: auto;
+  min-width: auto;
+  line-height: inherit; }
 
 .woocommerce-page #reviews #comments ol.commentlist li img.avatar {
   width: 60px; }
