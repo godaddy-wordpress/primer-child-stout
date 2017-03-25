@@ -1,3 +1,47 @@
+.site-header.video-header {
+
+	+.hero {
+		background-color: #000;
+		color: #000;
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		position: relative;
+
+		aside {
+			position: relative;
+		}
+
+		.hero-inner {
+			z-index: 1;
+		}
+
+		#wp-custom-header {
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+
+			img {
+				display: none;
+			}
+		}
+
+		#wp-custom-header-video-button {
+			position: absolute;
+			bottom: 0.5em;
+			left: 1em;
+			opacity: 0.5;
+			z-index: 11;
+		}
+
+		iframe#wp-custom-header-video {
+			height: 100%;
+			max-width: 100%;
+		}
+	}
+}
+
 .hero {
 	color: $background-color;
 	min-height: 300px;
