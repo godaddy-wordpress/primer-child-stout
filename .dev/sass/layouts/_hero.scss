@@ -7,6 +7,13 @@
 	background-position: center;
 	background-repeat: no-repeat;
 
+	#wp-custom-header {
+
+		img {
+			display: none;
+		}
+	}
+
 	.hero-inner {
 		@include container($container-size);
 
