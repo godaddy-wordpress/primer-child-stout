@@ -422,3 +422,18 @@ function stout_color_schemes( $color_schemes ) {
 
 }
 add_filter( 'primer_color_schemes', 'stout_color_schemes' );
+
+/**
+ * Enqueue stout hero scripts.
+ *
+ * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_script
+ * @since NEXT
+ */
+function stout_hero_scripts() {
+
+	$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+	wp_enqueue_script( 'stout-hero', get_stylesheet_directory_uri() . "/assets/js/stout-hero{$suffix}.js", array( 'jquery' ), PRIMER_VERSION, true );
+
+}
+add_action( 'wp_enqueue_scripts', 'stout_hero_scripts' );
