@@ -15,6 +15,8 @@
     "grunt-autoprefixer": "~3.0.4",
     "grunt-contrib-watch": "~1.0.0",
     "grunt-cssjanus": "~0.3.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.1.0",
     "grunt-dev-update": "~2.0.0",
     "grunt-sass": "^1.2.0",
     "grunt-text-replace": "^0.4.0",
