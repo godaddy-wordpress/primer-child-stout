@@ -25,6 +25,10 @@
 			bottom: 0.5em;
 			right: 1em;
 			opacity: 0.5;
+
+			@media #{$medium-down} {
+				display: none;
+			}
 		}
 
 		iframe#wp-custom-header-video {

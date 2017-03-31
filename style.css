@@ -1473,6 +1473,9 @@ blockquote {
     bottom: 0.5em;
     right: 1em;
     opacity: 0.5; }
+    @media only screen and (max-width: 61.063em) {
+      .site-header.video-header + .hero #wp-custom-header-video-button {
+        display: none; } }
   .site-header.video-header + .hero iframe#wp-custom-header-video {
     height: 100%;
     max-width: 100%; }
