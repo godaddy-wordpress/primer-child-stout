@@ -59,11 +59,33 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		jshint: {
+			assets: [ 'assets/js/*.js', '!assets/js/*.min.js' ],
+			gruntfile: [ 'Gruntfile.js' ]
+		},
+
+		uglify: {
+			options: {
+				ASCIIOnly: true
+			},
+			assets: {
+				expand: true,
+				cwd: 'assets/js/',
+				src: [ '**/*.js', '!**/*.min.js' ],
+				dest: 'assets/js/',
+				ext: '.min.js'
+			}
+		},
+
 		watch: {
 			css: {
 				files: '.dev/sass/**/*.scss',
 				tasks: [ 'sass','autoprefixer','cssjanus' ]
-			}
+			},
+			js: {
+				files: 'assets/js/**/*.js',
+				tasks: [ 'jshint', 'uglify' ]
+			},
 		},
 
 		replace: {
@@ -112,7 +134,7 @@ module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus' ] );
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'jshint', 'uglify' ] );
 	grunt.registerTask( 'version', [ 'replace' ] );
 
 };
