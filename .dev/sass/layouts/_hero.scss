@@ -1,18 +1,24 @@
 .hero {
 	color: $background-color;
-	margin-top: -100px;
 	min-height: 300px;
 	width: 100%;
 	padding-top: 100px;
 	background-size: cover;
-	background-position: center top;
+	background-position: center;
 	background-repeat: no-repeat;
+
+	#wp-custom-header {
+
+		img {
+			display: none;
+		}
+	}
 
 	.hero-inner {
 		@include container($container-size);
 
 		margin: 0 auto;
-		padding: 9% 2em;
+		padding: 121px 2em;
 
 		@media screen and (max-width: 900px) {
 			max-width: none;

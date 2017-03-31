@@ -9,6 +9,7 @@
 
 .main-navigation {
 	@include container($container-size);
+
 	display: none;
 
 	&.open {
@@ -83,15 +84,7 @@
 		@media #{$medium-up} {
 			position: relative;
 			float: left;
-
-			&:first-child > a {
-				border-top: 1px solid rgba(0, 0, 0, 0.1);
-			}
 		}
-	}
-
-	#menu-main-menu > li:first-child > a {
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
 	ul {
@@ -150,7 +143,7 @@
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 2em 1em;
+		padding: calc(2em + 1px) 1em 2em;
 		color: $header-textcolor;
 
 		@media #{$small-only} {
@@ -158,7 +151,6 @@
 			padding-top: 1.2em;
 			padding-bottom: 1.2em;
 		}
-
 	}
 
 	.current_page_item > a,
