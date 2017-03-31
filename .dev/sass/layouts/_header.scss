@@ -1,3 +1,20 @@
+@import "video-header";
+
+.site-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	body.admin-bar & {
+		top: 32px;
+
+		@media only screen and (max-width: 782px) {
+			top: 46px;
+		}
+	}
+}
+
 .site-header-wrapper {
 	@include container($container-size);
 
@@ -41,6 +58,7 @@
 		display: table-cell;
 		line-height: 1.333em;
 	}
+
 	@media #{$small-only} {
 		display: table-cell;
 		line-height: 1.333em;
