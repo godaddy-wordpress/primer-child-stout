@@ -89,7 +89,7 @@ TODO
 
 == Changelog ==
 
-= 1.2.0 =
+= 1.1.0 =
 
 * New: Added video header styles. @props [evanherman](https://github.com/EvanHerman)
 * New: Added pagination styles. @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
@@ -97,10 +97,6 @@ TODO
 * New: Added Ninja Forms compatibility styles. Styled response messages. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Various WooCommerce style tweaks, including i10n site specific tweaks. @props [evanherman](https://github.com/EvanHerman)
 * Fix: Fixed widget titles not rendering properly when using certain languages. @props [evanherman](https://github.com/EvanHerman)
-
-= 1.1.0 =
-
-* Tweak: Increased version number for Primer compatibility.
 
 = 1.0.0 =
 
