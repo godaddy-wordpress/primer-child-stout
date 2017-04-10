@@ -429,7 +429,7 @@ add_filter( 'primer_color_schemes', 'stout_color_schemes' );
  * Enqueue stout hero scripts.
  *
  * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_script
- * @since NEXT
+ * @since 1.1.0
  */
 function stout_hero_scripts() {
 
