@@ -59,11 +59,33 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		jshint: {
+			assets: [ 'assets/js/*.js', '!assets/js/*.min.js' ],
+			gruntfile: [ 'Gruntfile.js' ]
+		},
+
+		uglify: {
+			options: {
+				ASCIIOnly: true
+			},
+			assets: {
+				expand: true,
+				cwd: 'assets/js/',
+				src: [ '**/*.js', '!**/*.min.js' ],
+				dest: 'assets/js/',
+				ext: '.min.js'
+			}
+		},
+
 		watch: {
 			css: {
 				files: '.dev/sass/**/*.scss',
 				tasks: [ 'sass','autoprefixer','cssjanus' ]
-			}
+			},
+			js: {
+				files: 'assets/js/**/*.js',
+				tasks: [ 'jshint', 'uglify' ]
+			},
 		},
 
 		replace: {
@@ -106,13 +128,44 @@ module.exports = function( grunt ) {
 					to: 'charset=UTF-8'
 				} ]
 			}
+		},
+
+		wp_readme_to_markdown: {
+			options: {
+				post_convert: function( readme ) {
+					var matches = readme.match( /\*\*Tags:\*\*(.*)\r?\n/ ),
+					    tags    = matches[1].trim().split( ', ' ),
+					    section = matches[0];
+
+					for ( var i = 0; i < tags.length; i++ ) {
+						section = section.replace( tags[i], '[' + tags[i] + '](https://wordpress.org/themes/tags/' + tags[i] + '/)' );
+					}
+
+					// Tag links
+					readme = readme.replace( matches[0], section );
+
+					// Badges
+					readme = readme.replace( '## Description ##', grunt.template.process( pkg.badges.join( ' ' ) ) + "  \r\n\r\n## Description ##" );
+
+					// YouTube
+					readme = readme.replace( /\[youtube\s+(?:https?:\/\/www\.youtube\.com\/watch\?v=|https?:\/\/youtu\.be\/)(.+?)\]/g, '[![Play video on YouTube](https://img.youtube.com/vi/$1/maxresdefault.jpg)](https://www.youtube.com/watch?v=$1)' );
+
+					return readme;
+				}
+			},
+			main: {
+				files: {
+					'readme.md': 'readme.txt'
+				}
+			}
 		}
 
 	});
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus' ] );
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'jshint', 'uglify' ] );
+	grunt.registerTask( 'readme',  [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'version', [ 'replace' ] );
 
 };

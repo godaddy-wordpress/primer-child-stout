@@ -9,6 +9,7 @@
 
 .main-navigation {
 	@include container($container-size);
+
 	display: none;
 
 	&.open {
@@ -83,15 +84,7 @@
 		@media #{$medium-up} {
 			position: relative;
 			float: left;
-
-			&:first-child > a {
-				border-top: 1px solid rgba(0, 0, 0, 0.1);
-			}
 		}
-	}
-
-	#menu-main-menu > li:first-child > a {
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
 	ul {
@@ -150,7 +143,7 @@
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 2em 1em;
+		padding: calc(2em + 1px) 1em 2em;
 		color: $header-textcolor;
 
 		@media #{$small-only} {
@@ -158,7 +151,6 @@
 			padding-top: 1.2em;
 			padding-bottom: 1.2em;
 		}
-
 	}
 
 	.current_page_item > a,
@@ -184,6 +176,58 @@
 
 		@media #{$medium-up} {
 			display: inline;
+		}
+	}
+}
+
+.navigation.pagination {
+	clear: both;
+	margin: 0 0 1.5em;
+
+	.nav-links {
+		text-align: center;
+
+		.page-numbers {
+			display: inline-block;
+			border: none;
+			border-radius: 3px;
+			line-height: 1;
+			margin: 0 0.25em;
+			padding: 0.5em 0.75em;
+			white-space: nowrap;
+
+			&.dots {
+				background: none;
+			}
+
+			&.current {
+				color: $base-background-color;
+				background-color: $link-color;
+			}
+		}
+	}
+
+	.paging-nav-text {
+		display: none;
+	}
+
+	@media #{$small-only} {
+
+		.paging-nav-text {
+			display: inline-block;
+			font-size: 0.9rem;
+			font-weight: normal;
+			color: $main-text-color;
+		}
+
+		.nav-links {
+			float: right;
+
+			.page-numbers {
+				&:not(.prev, .next) {
+					display: none;
+				}
+			}
 		}
 	}
 }

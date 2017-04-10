@@ -1,9 +1,9 @@
 === Stout ===
-Contributors:      godaddy, fjarrett, jonathanbardo
+Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.6
-Stable tag:        1.0.0
+Tested up to:      4.7
+Stable tag:        1.1.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,15 @@ TODO
 
 == Changelog ==
 
-= 1.0.0 - TBD =
+= 1.1.0 =
+
+* New: Added video header styles. @props [evanherman](https://github.com/EvanHerman)
+* New: Added pagination styles. @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
+* New: Added priorities to theme functions for Primer compatibility. @props [evanherman](https://github.com/EvanHerman)
+* New: Added Ninja Forms compatibility styles. Styled response messages. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Various WooCommerce style tweaks, including i10n site specific tweaks. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed widget titles not rendering properly when using certain languages. @props [evanherman](https://github.com/EvanHerman)
+
+= 1.0.0 =
 
 * Initial release.

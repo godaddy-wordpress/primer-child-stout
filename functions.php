@@ -7,7 +7,7 @@
  *
  * @var string
  */
-define( 'PRIMER_CHILD_VERSION', '1.0.0' );
+define( 'PRIMER_CHILD_VERSION', '1.1.0' );
 
 /**
  * Move some elements around.
@@ -17,16 +17,18 @@ define( 'PRIMER_CHILD_VERSION', '1.0.0' );
  */
 function stout_move_elements() {
 
-	remove_action( 'primer_header',       'primer_add_hero' );
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
-	remove_action( 'primer_after_header', 'primer_add_page_title' );
+	remove_action( 'primer_header',                'primer_add_hero',               7 );
+	remove_action( 'primer_after_header',          'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_after_header',          'primer_add_page_title',         12 );
+	remove_action( 'primer_before_header_wrapper', 'primer_video_header',           5 );
 
-	add_action( 'primer_after_header', 'primer_add_hero' );
-	add_action( 'primer_header',       'primer_add_primary_navigation' );
+	add_action( 'primer_after_header', 'primer_add_hero',               7 );
+	add_action( 'primer_header',       'primer_add_primary_navigation', 11 );
+	add_action( 'primer_hero',         'primer_video_header',           3 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
-		add_action( 'primer_hero', 'primer_add_page_title' );
+		add_action( 'primer_hero', 'primer_add_page_title', 12 );
 
 	}
 
@@ -422,3 +424,18 @@ function stout_color_schemes( $color_schemes ) {
 
 }
 add_filter( 'primer_color_schemes', 'stout_color_schemes' );
+
+/**
+ * Enqueue stout hero scripts.
+ *
+ * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_script
+ * @since 1.1.0
+ */
+function stout_hero_scripts() {
+
+	$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+	wp_enqueue_script( 'stout-hero', get_stylesheet_directory_uri() . "/assets/js/stout-hero{$suffix}.js", array( 'jquery' ), PRIMER_VERSION, true );
+
+}
+add_action( 'wp_enqueue_scripts', 'stout_hero_scripts' );
