@@ -12,16 +12,15 @@ script:
 
 before_deploy:
   - export RELEASE_FOLDER=stout
-  - php /tmp/wp-cli.phar package install runcommand/dist-archive
+  - php /tmp/wp-cli.phar package install git@github.com:wp-cli/dist-archive-command.git
   - cp -rv ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
   - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
   - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
 
-
 deploy:
   provider: releases
   api_key:
-    secure: ryAaRSKH/Dv/JYreRHljf1Qp0GQt8d0YqBbKcQdSkGDMCclpOep6JGK6m3vZkJ3O0TO/M3tSfYbvjCzST65b+ZaqfAIVzABnQSd1Liy6fCfzKWe9SBZyO+8sTskTN1tmnEwl8T2K19p6SJk7vfTKchHUQ2lptNBLzvnFx7i/UU7ezEu3JvqPzKESBtp+/Jmj/KAJNRZKpAJ/iOPTf4v7XbJfUYBF0PJGabyQCgE4C/ZI7PSYN9b6Jv32kOCZ+zN9Hy2FLiNNwqKB/2GwBYBWQiuUzig+M327IO6X349a34NtFu5KPJJMi2wLl1JSQEZbO/stPAWsxpvSRM0KFG8wSsaPZTCD5ZYBJ9f6VLi5+r25FK5Pz7AldAPc20V0E00vqUycKopnJMKoAqEuCJ5Qde9ckZqDZqpeoyfX3EF9rONVu6p2RG98GPhPWhOdAEdP21sbuKYxkInagEsKyWfNSJKwEe4BByCesIfhOEGf/Yv9IWEXw1bIBNS5aoF1pIhqru8jUYLDtmvrlY/5m25tGoW1ToGDsGfsTtwhOlGt/2B8mrutXSduA4kwROE3S2RRRkKg/aebWruUJOQd7mjL49styct03z6Yw9TzHoa4uARY5MHXUodaEtYlCYeaCEQ9RWE30MelVqlbOR06tsMcDuZri6B1zl1/QNoI1sMu2Xo=
+    secure: fjihUUnxFuY1/GkgFuCWgYpp9cymSG4VzPCXMG3xso5XX45qBIdzqgDxrIcWHkswwb72O7RZnWRq4rYYsIfmB/2gxJxuwJglEsSegjJqHnxVBsjhBjZgvX/ooitOdCL3Lb9fJCwY2uKD2hMov6XmNv+U+XzNO5raYXxy32L+D6+9nHBSq97oIrtaOfjpX9fcd9MU2whJgWGUPkePu2/V+2wMroeG5ZTC4Dcg47g4Oir4ccdhDWgNOFs3SOVhlzQyHW9DFVtfAAYj86B1Oi0mUZGpYVBSQC4ygxtyGYQEsO7sTZu5jb2TPDSp+oziDYZ9+7JEEUQjsd5BJ++tsBDeKLUaZFzJBAWha1YmnsNW2PRvcfbTugYK9hxf6sEQY1Jm3BaGTDS4qG/PQ1csDQhqlC5Cz0wJ/ETp8b2JvqMaajSeBWhSZtlt5/04R73UNYDPKRxuqN6Qv4xADY9OMSG20YKYy1Nr/5oQx/gRahtyS9saLUGi3ZTGC1oAhqytdjc9Ot/fsxriBMARIekXdznKpGcmYCzU8hKZg59WLZjqHA0CvDR6XHuNmBTAnTrI+THmFtDrqjL9riVogTbjXczb8Mji6sq95R6X97viYLM3M8y3Fpar9l1UZW+jarpqdlssfcU8HcUD4oH0/fzRYM5o6RiJgBYkdbmuewh+Zgx9QHI=
   file: stout.zip
   on:
     tags: true
