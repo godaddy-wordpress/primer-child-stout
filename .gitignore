@@ -6,6 +6,7 @@ build/
 node_modules/
 svn-url
 svn-username
+package-lock.json
 tests/codeception/_output/*
 vendor/
 .dev/local-url
