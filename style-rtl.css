@@ -4,7 +4,7 @@
  * Author: GoDaddy
  * Author URI: https://www.godaddy.com/
  * Description: Stout is a Primer child theme with a masculine vibe.
- * Version: 1.1.1
+ * Version: 1.1.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: stout
@@ -1772,7 +1772,7 @@ blockquote {
       color: #252f31; }
     .navigation.pagination .nav-links {
       float: left; }
-      .navigation.pagination .nav-links .page-numbers:not(.prev):not(.next) {
+      .navigation.pagination .nav-links .page-numbers {
         display: none; } }
 
 body.no-max-width .main-navigation {

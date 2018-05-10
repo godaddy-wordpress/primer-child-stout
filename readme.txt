@@ -3,7 +3,7 @@ Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
 Tested up to:      4.9
-Stable tag:        1.1.1
+Stable tag:        1.1.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,15 +73,18 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
+Stout WordPress Theme is child theme of Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC.
+Primer WordPress Theme is distributed under the terms of the GNU GPL
+
 Stout bundles the following third-party resources:
 
 Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-Stock photography, Unsplash
+Stock photography, Pixabay
 License: Creative Commons Zero
-Source: https://unsplash.com/photos/6Khbjy2v-GE/
+Source: https://pixabay.com/en/barbecue-burning-charcoal-cup-fire-1851134/
 
 == Frequently Asked Questions ==
 
