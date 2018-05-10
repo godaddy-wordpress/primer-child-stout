@@ -3,13 +3,13 @@
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [fixed-layout](https://wordpress.org/themes/tags/fixed-layout/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [fluid-layout](https://wordpress.org/themes/tags/fluid-layout/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [light](https://wordpress.org/themes/tags/light/), [one-column](https://wordpress.org/themes/tags/one-column/), [responsive-layout](https://wordpress.org/themes/tags/responsive-layout/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
 **Requires at least:** 4.4  
 **Tested up to:**      4.9  
-**Stable tag:**        1.1.1  
+**Stable tag:**        1.1.0  
 **License:**           GPL-2.0  
 **License URI:**       https://www.gnu.org/licenses/gpl-2.0.html  
 
 Stout is a GoDaddy Primer child theme with a bold vibe.
 
-[![Build Status](https://travis-ci.org/godaddy/wp-stout-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-stout-theme) [![StyleCI Status](https://styleci.io/repos/61812792/shield?branch=master&style=flat)](https://styleci.io/repos/61812792) [![devDependencies Status](https://david-dm.org/godaddy/wp-stout-theme/master/dev-status.svg)](https://david-dm.org/godaddy/wp-stout-theme/master?type=dev) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-stout-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
+[![Build Status](https://travis-ci.org/godaddy/wp-stout-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-stout-theme) [![devDependencies Status](https://david-dm.org/godaddy/wp-stout-theme/master/dev-status.svg)](https://david-dm.org/godaddy/wp-stout-theme/master?type=dev) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-stout-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
 
 ## Description ##
 
@@ -75,15 +75,18 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
+Stout WordPress Theme is child theme of Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC.
+Primer WordPress Theme is distributed under the terms of the GNU GPL
+
 Stout bundles the following third-party resources:
 
 Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-Stock photography, Unsplash
+Stock photography, Pixabay
 License: Creative Commons Zero
-Source: https://unsplash.com/photos/6Khbjy2v-GE/
+Source: https://pixabay.com/en/barbecue-burning-charcoal-cup-fire-1851134/
 
 ## Frequently Asked Questions ##
 
