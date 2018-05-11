@@ -54,7 +54,7 @@ You can fork and contribute to Stout by visiting [our public repo on GitHub](htt
 
 ## Installation ##
 
-1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+1. In your admin panel, navigate to **Appearance > Themes** and click the **Add New** button.
 2. Type **Stout** in the search form and press the **Enter** key on your keyboard.
 3. Click the **Activate** button to begin using Stout on your website.
 4. In your admin panel, navigate to **Appearance > Customize**.
@@ -85,15 +85,11 @@ Stock photography, Unsplash
 License: Creative Commons Zero
 Source: https://unsplash.com/photos/6Khbjy2v-GE/
 
-## Frequently Asked Questions ##
-
-TODO
-
-## Developer Tools ##
-
-TODO
-
 ## Changelog ##
+
+### 1.1.1 ###
+
+* Tweak: Various tweaks in preparation for WordPress.org submission. @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.1.0 ###
 
