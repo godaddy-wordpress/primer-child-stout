@@ -3,7 +3,7 @@ Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
 Tested up to:      4.9
-Stable tag:        1.1.1
+Stable tag:        1.1.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,7 +52,7 @@ You can fork and contribute to Stout by visiting [our public repo on GitHub](htt
 
 == Installation ==
 
-1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+1. In your admin panel, navigate to **Appearance > Themes** and click the **Add New** button.
 2. Type **Stout** in the search form and press the **Enter** key on your keyboard.
 3. Click the **Activate** button to begin using Stout on your website.
 4. In your admin panel, navigate to **Appearance > Customize**.
@@ -60,8 +60,8 @@ You can fork and contribute to Stout by visiting [our public repo on GitHub](htt
 
 == Copyright ==
 
-Stout WordPress theme, Copyright 2016 GoDaddy Operating Company, LLC.
-Stout is distributed under the terms of the GNU GPL.
+Stout WordPress Theme is a child theme of Primer WordPress Theme, Copyright 2016 GoDaddy Operating Company, LLC.
+Primer WordPress Theme is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -73,28 +73,21 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Stout WordPress Theme is child theme of Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC.
-Primer WordPress Theme is distributed under the terms of the GNU GPL
-
 Stout bundles the following third-party resources:
 
 Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-Stock photography, Pixabay
+Stock photography, Unsplash
 License: Creative Commons Zero
-Source: https://pixabay.com/en/barbecue-burning-charcoal-cup-fire-1851134/
-
-== Frequently Asked Questions ==
-
-TODO
-
-== Developer Tools ==
-
-TODO
+Source: https://unsplash.com/photos/6Khbjy2v-GE/
 
 == Changelog ==
+
+= 1.1.1 =
+
+* Tweak: Various tweaks in preparation for WordPress.org submission. @props [evanherman](https://github.com/EvanHerman)
 
 = 1.1.0 =
 

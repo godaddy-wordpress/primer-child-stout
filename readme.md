@@ -3,7 +3,7 @@
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [fixed-layout](https://wordpress.org/themes/tags/fixed-layout/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [fluid-layout](https://wordpress.org/themes/tags/fluid-layout/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [light](https://wordpress.org/themes/tags/light/), [one-column](https://wordpress.org/themes/tags/one-column/), [responsive-layout](https://wordpress.org/themes/tags/responsive-layout/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
 **Requires at least:** 4.4  
 **Tested up to:**      4.9  
-**Stable tag:**        1.1.1  
+**Stable tag:**        1.1.0  
 **License:**           GPL-2.0  
 **License URI:**       https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -62,8 +62,8 @@ You can fork and contribute to Stout by visiting [our public repo on GitHub](htt
 
 ## Copyright ##
 
-Stout WordPress theme, Copyright 2016 GoDaddy Operating Company, LLC.
-Stout is distributed under the terms of the GNU GPL.
+Stout WordPress Theme is a child theme of Primer WordPress Theme, Copyright 2016 GoDaddy Operating Company, LLC.
+Primer WordPress Theme is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -75,18 +75,15 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Stout WordPress Theme is child theme of Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC.
-Primer WordPress Theme is distributed under the terms of the GNU GPL
-
 Stout bundles the following third-party resources:
 
 Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-Stock photography, Pixabay
+Stock photography, Unsplash
 License: Creative Commons Zero
-Source: https://pixabay.com/en/barbecue-burning-charcoal-cup-fire-1851134/
+Source: https://unsplash.com/photos/6Khbjy2v-GE/
 
 ## Frequently Asked Questions ##
 
