@@ -87,7 +87,7 @@ Source: https://unsplash.com/photos/6Khbjy2v-GE/
 
 ## Changelog ##
 
-### 1.1.1 ###
+### 1.1.1/1.1.2 ###
 
 * Tweak: Various tweaks in preparation for WordPress.org submission. @props [evanherman](https://github.com/EvanHerman)
 
