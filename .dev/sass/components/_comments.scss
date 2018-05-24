@@ -37,4 +37,23 @@
 			clear: both;
 		}
 	}
+
+	.comment-form-cookies-consent {
+		display: flex;
+		line-height: 16px;
+
+		#wp-comment-cookies-consent {
+			display: inline;
+			width: auto;
+			margin: 0 10px 0 0;
+
+			+ label[for="wp-comment-cookies-consent"] {
+				line-height: 1.2;
+			}
+
+			@media #{$small-only} {
+				margin-top: 2px;
+			}
+		}
+	}
 }

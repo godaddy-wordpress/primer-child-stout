@@ -88,9 +88,21 @@
 	padding-bottom: 2em;
 	text-align: center;
 
+	.privacy-policy-link {
+		display: inline-block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
 	@media #{$large-up} {
 		text-align: right;
+		margin-bottom: 5px;
 
+		.privacy-policy-link {
+			@include span(9);
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
 		.site-info-text {
 			@include span(9);
 		}
@@ -130,6 +142,7 @@
 
 .social-menu {
 	margin-top: 1.5em;
+	display: inline;
 
 	ul {
 		list-style: none;
@@ -143,5 +156,6 @@
 	@media #{$large-up} {
 		margin-top: 0;
 		text-align: left;
+		display: block;
 	}
 }
