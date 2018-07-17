@@ -1,95 +1,67 @@
 /*--------------------------------------------------------------
 >>> Gutenberg:
 --------------------------------------------------------------*/
-.wp-block-cover-image {
-	margin-bottom: 1.5rem;
-}
-
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull,
-.wp-block-cover-text.alignfull,
-.wp-block-gallery.alignfull,
-.wp-block-text-columns.alignfull {
-	margin-left: -25%;
-	width: 150%;
-
-	figcaption {
-		padding: 0 3.375em;
-	}
-
-	@media #{$medium-down} {
-		margin-left: -0.71rem;
-		width: calc( 100% + 1.42rem );
-
-		figcaption {
-			padding: 0 2.375em;
-		}
-	}
-
-	@media #{$small-only} {
-		figcaption {
-			padding: 0 1em;
-		}
-	}
-}
-
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull,
-.wp-block-cover-image.alignwide,
-.wp-block-image.alignwide {
-	img {
-		width: 100%;
-	}
-}
-
-.wp-block-cover-image.alignwide,
-.wp-block-image.alignwide,
-.wp-block-cover-text.alignwide,
-.wp-block-image.alignwide,
-.wp-block-gallery.alignwide,
-.wp-block-text-columns.alignwide {
-	margin-left: -0.694445%;
-	width: calc( 100% + 1.38889% );
-}
-
-.wp-block-image,
-.wp-block-gallery,
-.wp-block-video,
-.wp-block-quote,
-.wp-block-text-columns,
-.entry-content ul,
-.entry-content ol,
-.wp-block-cover-text {
-	&.alignleft {
-		margin: 0 1em 0.5em 0;
-	}
-
-	&.alignright {
-		margin: 0 0 0.5em 1em;
-	}
-
-	&.alignleft,
-	&.alignright {
-		max-width: 40%;
-		@media #{$small-only} {
-			max-width: 100%;
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-}
-
 body.customize-support {
-	overflow-x: hidden;
+	.wp-block-cover-image {
+		margin-bottom: 1.5rem;
+	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	.site-title,
-	.page-title {
-		clear: none;
+	.alignfull {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.alignwide {
+		margin-left: -0.694445%;
+		width: calc( 100% + 1.38889% );
+
+		@media #{$small-only} {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	.wp-block-image,
+	.wp-block-gallery,
+	.wp-block-video,
+	.wp-block-quote,
+	.wp-block-text-columns,
+	.entry-content ul,
+	.entry-content ol,
+	.wp-block-cover-text {
+		&.alignleft {
+			margin: 0 1em 0.5em 0;
+		}
+
+		&.alignright {
+			margin: 0 0 0.5em 1em;
+		}
+
+		&.alignleft,
+		&.alignright {
+			max-width: 40%;
+			width: 100%;
+
+			img {
+				width: inherit;
+			}
+		}
+	}
+
+	.wp-block-gallery {
+		margin-left: 0;
+		margin-right: 0;
+
+		&.is-cropped .blocks-gallery-item img {
+			height: auto;
+		}
 	}
 }
