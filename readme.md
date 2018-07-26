@@ -87,6 +87,10 @@ Source: https://unsplash.com/photos/6Khbjy2v-GE/
 
 ## Changelog ##
 
+### 1.1.4 ###
+
+* New: Introduce styles for Gutenberg support. @props [evanherman](https://github.com/EvanHerman)
+
 ### 1.1.3 ###
 
 * New: Added styles for WordPress 4.9.6 privacy policy footer link & cookie comment checkbox. @props [evanherman](https://github.com/EvanHerman)
