@@ -103,3 +103,10 @@
 		margin: 20px 0;
 	}
 }
+
+.wp-block-columns.has-1-columns {
+
+	.wp-block-column {
+		flex-basis: 100%
+	}
+}
