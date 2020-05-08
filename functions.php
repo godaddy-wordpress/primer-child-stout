@@ -1,9 +1,9 @@
 <?php
-
 /**
  * Child theme version.
  *
- * @since 1.0.0
+ * @since   1.0.0
+ * @package Primer
  *
  * @var string
  */
@@ -17,14 +17,14 @@ define( 'PRIMER_CHILD_VERSION', '1.1.4' );
  */
 function stout_move_elements() {
 
-	remove_action( 'primer_header',                'primer_add_hero',               7 );
-	remove_action( 'primer_after_header',          'primer_add_primary_navigation', 11 );
-	remove_action( 'primer_after_header',          'primer_add_page_title',         12 );
-	remove_action( 'primer_before_header_wrapper', 'primer_video_header',           5 );
+	remove_action( 'primer_header', 'primer_add_hero', 7 );
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
+	remove_action( 'primer_before_header_wrapper', 'primer_video_header', 5 );
 
-	add_action( 'primer_after_header', 'primer_add_hero',               7 );
-	add_action( 'primer_header',       'primer_add_primary_navigation', 11 );
-	add_action( 'primer_hero',         'primer_video_header',           3 );
+	add_action( 'primer_after_header', 'primer_add_hero', 7 );
+	add_action( 'primer_header', 'primer_add_primary_navigation', 11 );
+	add_action( 'primer_hero', 'primer_video_header', 3 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
@@ -56,7 +56,7 @@ add_filter( 'primer_hero_image_selector', 'stout_hero_image_selector' );
  * @filter primer_custom_logo_args
  * @since  1.0.0
  *
- * @param  array $args
+ * @param  array $args Argument array.
  *
  * @return array
  */
@@ -76,7 +76,7 @@ add_filter( 'primer_custom_logo_args', 'stout_custom_logo_args' );
  * @filter primer_fonts
  * @since  1.0.0
  *
- * @param  array $fonts
+ * @param  array $fonts Font array.
  *
  * @return array
  */
@@ -96,7 +96,7 @@ add_filter( 'primer_fonts', 'stout_fonts' );
  * @filter primer_font_types
  * @since  1.0.0
  *
- * @param  array $font_types
+ * @param  array $font_types Font type array.
  *
  * @return array
  */
@@ -109,13 +109,13 @@ function stout_font_types( $font_types ) {
 		'navigation_font' => array(
 			'default' => 'Oswald',
 		),
-		'heading_font' => array(
+		'heading_font'    => array(
 			'default' => 'Oswald',
 		),
-		'primary_font' => array(
+		'primary_font'    => array(
 			'default' => 'Lato',
 		),
-		'secondary_font' => array(
+		'secondary_font'  => array(
 			'default' => 'Lato',
 		),
 	);
@@ -131,7 +131,7 @@ add_filter( 'primer_font_types', 'stout_font_types' );
  * @filter primer_colors
  * @since  1.0.0
  *
- * @param  array $colors
+ * @param  array $colors Color array.
  *
  * @return array
  */
@@ -142,42 +142,43 @@ function stout_colors( $colors ) {
 		$colors['footer_widget_content_background_color']
 	);
 
+	// @codingStandardsIgnoreStart
 	$overrides = array(
 		/**
 		 * Text colors
 		 */
-		'header_textcolor' => array(
+		'header_textcolor'                 => array(
 			'default' => '#e3ad31',
 		),
-		'tagline_text_color' => array(
+		'tagline_text_color'               => array(
 			'default' => '#686868',
 		),
-		'hero_text_color' => array(
+		'hero_text_color'                  => array(
 			'default' => '#ffffff',
 		),
-		'menu_text_color' => array(
+		'menu_text_color'                  => array(
 			'default' => '#686868',
 		),
-		'heading_text_color' => array(
+		'heading_text_color'               => array(
 			'default' => '#353535',
 		),
-		'primary_text_color' => array(
+		'primary_text_color'               => array(
 			'default' => '#252525',
 		),
-		'secondary_text_color' => array(
+		'secondary_text_color'             => array(
 			'default' => '#686868',
 		),
 		'footer_widget_heading_text_color' => array(
 			'default' => '#ffffff',
 		),
-		'footer_widget_text_color' => array(
+		'footer_widget_text_color'         => array(
 			'default' => '#ffffff',
 		),
-		'footer_menu_text_color' => array(
-			'default' => '#252525',
+		'footer_menu_text_color'           => array(
+			'default'  => '#252525',
 			'css'      => array(
 				'.footer-menu ul li a,
-				.footer-menu ul li a:visited' => array(
+				.footer-menu ul li a:visited'              => array(
 					'color' => '%1$s',
 				),
 				'.site-info-wrapper .social-menu a,
@@ -192,31 +193,31 @@ function stout_colors( $colors ) {
 				),
 			),
 		),
-		'footer_text_color' => array(
+		'footer_text_color'                => array(
 			'default' => '#686868',
 		),
 		/**
 		 * Link / Button colors
 		 */
-		'link_color' => array(
+		'link_color'                       => array(
 			'default' => '#e3ad31',
 		),
-		'button_color' => array(
+		'button_color'                     => array(
 			'default' => '#e3ad31',
 		),
-		'button_text_color' => array(
+		'button_text_color'                => array(
 			'default' => '#ffffff',
 		),
 		/**
 		 * Background colors
 		 */
-		'background_color' => array(
+		'background_color'                 => array(
 			'default' => '#ffffff',
 		),
-		'hero_background_color' => array(
+		'hero_background_color'            => array(
 			'default' => '#252525',
 		),
-		'menu_background_color' => array(
+		'menu_background_color'            => array(
 			'default' => '#ffffff',
 			'css'     => array(
 				'.site-header-wrapper' => array(
@@ -224,13 +225,14 @@ function stout_colors( $colors ) {
 				),
 			),
 		),
-		'footer_widget_background_color' => array(
+		'footer_widget_background_color'   => array(
 			'default' => '#4e4e4e',
 		),
-		'footer_background_color' => array(
+		'footer_background_color'          => array(
 			'default' => '#ffffff',
 		),
 	);
+	// @codingStandardsIgnoreEnd
 
 	return primer_array_replace_recursive( $colors, $overrides );
 
@@ -243,7 +245,7 @@ add_filter( 'primer_colors', 'stout_colors' );
  * @filter primer_color_schemes
  * @since  1.0.0
  *
- * @param  array $color_schemes
+ * @param  array $color_schemes Color scheme array.
  *
  * @return array
  */
@@ -252,30 +254,30 @@ function stout_color_schemes( $color_schemes ) {
 	unset( $color_schemes['canary'] );
 
 	$overrides = array(
-		'blush' => array(
+		'blush'     => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['blush']['base'],
 				'link_color'       => $color_schemes['blush']['base'],
 				'button_color'     => $color_schemes['blush']['base'],
 			),
 		),
-		'bronze' => array(
+		'bronze'    => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['bronze']['base'],
 				'link_color'       => $color_schemes['bronze']['base'],
 				'button_color'     => $color_schemes['bronze']['base'],
 			),
 		),
-		'cool' => array(
+		'cool'      => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['cool']['base'],
 				'link_color'       => $color_schemes['cool']['base'],
 				'button_color'     => $color_schemes['cool']['base'],
 			),
 		),
-		'dark' => array(
+		'dark'      => array(
 			'colors' => array(
-				// Text
+				// Text.
 				'tagline_text_color'               => '#999999',
 				'menu_text_color'                  => '#ffffff',
 				'heading_text_color'               => '#ffffff',
@@ -284,35 +286,35 @@ function stout_color_schemes( $color_schemes ) {
 				'footer_widget_heading_text_color' => '#ffffff',
 				'footer_widget_text_color'         => '#ffffff',
 				'footer_menu_text_color'           => '#ffffff',
-				// Backgrounds
-				'background_color'               => '#222222',
-				'hero_background_color'          => '#282828',
-				'menu_background_color'          => '#333333',
-				'footer_widget_background_color' => '#282828',
-				'footer_background_color'        => '#222222',
+				// Backgrounds.
+				'background_color'                 => '#222222',
+				'hero_background_color'            => '#282828',
+				'menu_background_color'            => '#333333',
+				'footer_widget_background_color'   => '#282828',
+				'footer_background_color'          => '#222222',
 			),
 		),
-		'iguana' => array(
+		'iguana'    => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['iguana']['base'],
 				'link_color'       => $color_schemes['iguana']['base'],
 				'button_color'     => $color_schemes['iguana']['base'],
 			),
 		),
-		'muted' => array(
+		'muted'     => array(
 			'colors' => array(
-				// Text
-				'header_textcolor'       => '#5a6175',
-				'menu_text_color'        => '#5a6175',
-				'heading_text_color'     => '#4f5875',
-				'primary_text_color'     => '#4f5875',
-				'secondary_text_color'   => '#888c99',
-				'footer_menu_text_color' => $color_schemes['muted']['base'],
-				'footer_text_color'      => '#4f5875',
-				// Links & Buttons
-				'link_color'   => $color_schemes['muted']['base'],
-				'button_color' => $color_schemes['muted']['base'],
-				// Backgrounds
+				// Text.
+				'header_textcolor'               => '#5a6175',
+				'menu_text_color'                => '#5a6175',
+				'heading_text_color'             => '#4f5875',
+				'primary_text_color'             => '#4f5875',
+				'secondary_text_color'           => '#888c99',
+				'footer_menu_text_color'         => $color_schemes['muted']['base'],
+				'footer_text_color'              => '#4f5875',
+				// Links & Buttons.
+				'link_color'                     => $color_schemes['muted']['base'],
+				'button_color'                   => $color_schemes['muted']['base'],
+				// Backgrounds.
 				'background_color'               => '#ffffff',
 				'hero_background_color'          => '#5a6175',
 				'menu_background_color'          => '#ffffff',
@@ -320,7 +322,7 @@ function stout_color_schemes( $color_schemes ) {
 				'footer_background_color'        => '#ffffff',
 			),
 		),
-		'plum' => array(
+		'plum'      => array(
 			'colors' => array(
 				'header_textcolor'               => $color_schemes['plum']['base'],
 				'link_color'                     => $color_schemes['plum']['base'],
@@ -328,7 +330,7 @@ function stout_color_schemes( $color_schemes ) {
 				'footer_widget_background_color' => '#191919',
 			),
 		),
-		'rose' => array(
+		'rose'      => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['rose']['base'],
 				'link_color'       => $color_schemes['rose']['base'],
@@ -347,75 +349,6 @@ function stout_color_schemes( $color_schemes ) {
 				'header_textcolor' => $color_schemes['turquoise']['base'],
 				'link_color'       => $color_schemes['turquoise']['base'],
 				'button_color'     => $color_schemes['turquoise']['base'],
-			),
-		),
-	);
-
-	return primer_array_replace_recursive( $color_schemes, $overrides );
-
-	$overrides = array(
-		'blush' => array(
-			'colors' => array(
-				'header_textcolor'      => '#cc494f',
-				'menu_background_color' => '#ffffff',
-			),
-		),
-		'bronze' => array(
-			'colors' => array(
-				'header_textcolor'      => '#b1a18b',
-				'menu_background_color' => '#ffffff',
-			),
-		),
-		'cool' => array(
-			'colors' => array(
-				'header_textcolor'      => '#78c3fb',
-				'menu_background_color' => '#ffffff',
-			),
-		),
-		'dark' => array(
-			'colors' => array(
-				'link_color'   => '#e3ad31',
-				'button_color' => '#e3ad31',
-			),
-		),
-		'iguana' => array(
-			'colors' => array(
-				'header_textcolor'      => '#62bf7c',
-				'menu_background_color' => '#ffffff',
-			),
-		),
-		'muted' => array(
-			'colors' => array(
-				'header_textcolor'               => '#5a6175',
-				'menu_text_color'                => '#5a6175',
-				'background_color'               => '#ffffff',
-				'menu_background_color'          => '#ffffff',
-				'footer_widget_background_color' => '#d5d6e0',
-				'footer_background_color'        => '#ffffff',
-			),
-		),
-		'plum' => array(
-			'colors' => array(
-				'header_textcolor'      => '#5d5179',
-				'menu_background_color' => '#ffffff',
-			),
-		),
-		'rose' => array(
-			'colors' => array(
-				'header_textcolor'      => '#f49390',
-				'menu_background_color' => '#ffffff',
-			),
-		),
-		'tangerine' => array(
-			'colors' => array(
-				'header_textcolor'      => '#fc9e4f',
-				'menu_background_color' => '#ffffff',
-			),
-		),
-		'turquoise' => array(
-			'colors' => array(
-				'header_textcolor'      => '#48e5c2',
-				'menu_background_color' => '#ffffff',
 			),
 		),
 	);
