@@ -10,7 +10,7 @@
 
 Stout is a GoDaddy Primer child theme with a bold vibe.
 
-[![Build Status](https://travis-ci.org/godaddy/wp-stout-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-stout-theme) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-stout-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
+[![CircleCI](https://circleci.com/gh/godaddy-wordpress/primer-child-stout.svg?style=svg)](https://circleci.com/gh/godaddy-wordpress/primer-child-stout) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy-wordpress/primer-child-stout/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
 
 ## Description ##
 
